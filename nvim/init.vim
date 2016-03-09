@@ -1,6 +1,7 @@
 syntax on
 filetype plugin indent on
 
+" General Options
 set autowrite
 set backspace=indent,eol,start
 set completeopt=menu,longest,preview
