@@ -33,7 +33,7 @@ set splitright
 set tabstop=2
 set undofile
 set wildignorecase
-set wildmode=list:longest,full
+set wildmode=list:full
 
 let mapleader = ' '
 
