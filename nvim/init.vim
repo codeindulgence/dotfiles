@@ -9,6 +9,7 @@ set confirm
 set expandtab
 set exrc
 set fileformat=unix
+set formatoptions-=cro
 set gdefault
 set grepprg=ag\ --nogroup\ --nocolor
 set hidden
@@ -18,6 +19,7 @@ set list
 set listchars=tab:⇢\ ,extends:▶,precedes:◀,trail:∙,nbsp:∙,precedes:<,extends:>
 set nojoinspaces
 set number
+set nrformats=bin,hex,alpha
 set relativenumber
 set ruler
 set scrolloff=2
@@ -31,6 +33,8 @@ set softtabstop=2
 set splitbelow
 set splitright
 set tabstop=2
+set ttimeout
+set ttimeoutlen=100
 set undofile
 set wildignorecase
 set wildmode=list:full
@@ -105,4 +109,5 @@ let g:GPGExecutable="gpg2"
 
 call plug#end()
 
-" Plugin Configuration
+" Options set on buffer load
+autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
