@@ -85,7 +85,8 @@ cnoreabbrev Q q
 cnoreabbrev WQ wq
 
 " Commands
-command! Reload :source ~/.config/nvim/init.vim
+command! -bar Reload :source ~/.config/nvim/init.vim
+command! Install :Reload | :PlugInstall
 
 " Plugins
 let g:plug_window = 'enew'
