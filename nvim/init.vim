@@ -113,6 +113,9 @@ nnoremap <Leader>b :Buffers<CR>
 Plug 'jamessan/vim-gnupg'
 let g:GPGExecutable="gpg2"
 
+" Ranger
+Plug 'codeindulgence/vim-ranger'
+
 call plug#end()
 
 " Options set on buffer load
