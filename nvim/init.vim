@@ -51,7 +51,6 @@ nnoremap v <C-V>
 nnoremap <C-V> v
 nnoremap S :%s::g<Left><Left>
 nnoremap <Leader>w :%s/\s\+$//e<CR>
-nnoremap F ;
 nnoremap ; :
 nnoremap <C-G> :Silent TERM=rxvt-256color tig status<CR>
 
