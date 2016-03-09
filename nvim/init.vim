@@ -58,6 +58,8 @@ nnoremap <Leader>w :%s/\s\+$//e<CR>
 nnoremap ; :
 nnoremap : ;
 nnoremap <C-G> :new \| :terminal TERM=rxvt-256color tig status<CR>
+nnoremap <Leader>h :History<CR>
+nnoremap <Leader>o :e .<CR>
 
 " Insert Mappings
 inoremap <C-F> <Right>
