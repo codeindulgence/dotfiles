@@ -57,7 +57,6 @@ nnoremap S :%s::g<Left><Left>
 nnoremap <Leader>w :%s/\s\+$//e<CR>
 nnoremap ; :
 nnoremap : ;
-nnoremap <C-G> :new \| :terminal TERM=rxvt-256color tig status<CR>
 nnoremap <Leader>h :History<CR>
 nnoremap <Leader>o :e .<CR>
 
@@ -117,6 +116,10 @@ let g:GPGExecutable="gpg2"
 
 " Ranger
 Plug 'codeindulgence/vim-ranger'
+
+" Tig
+Plug 'codeindulgence/vim-tig'
+nnoremap <C-G> :Tig<CR>
 
 call plug#end()
 
