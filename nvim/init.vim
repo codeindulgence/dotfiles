@@ -59,6 +59,7 @@ nnoremap ; :
 nnoremap : ;
 nnoremap <Leader>h :History<CR>
 nnoremap <Leader>o :e .<CR>
+nnoremap <Leader>a :Ag<CR>
 
 " Insert Mappings
 inoremap <C-F> <Right>
