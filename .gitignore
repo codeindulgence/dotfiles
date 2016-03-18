@@ -1,4 +1,6 @@
 nvim/plugged
+fish/fish_history
+fish/fish_read_history
 
 # Created by https://www.gitignore.io/api/vim
 
