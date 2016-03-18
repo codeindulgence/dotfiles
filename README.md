@@ -1,0 +1,8 @@
+Code Indulgence Dotfiles
+========================
+
+Configuration files for the following:
+
+ - Fish: Friendly Interactive Shell
+ - Tmux: Terminal Multiplexer that's bloody brilliant
+ - Neovim: Post modern Vim
