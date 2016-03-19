@@ -1,7 +1,7 @@
-nvim/plugged
-fish/fish_history
-fish/fish_read_history
-fish/fishd.*
+config/nvim/plugged
+config/fish/fish_history
+config/fish/fish_read_history
+config/fish/fishd.*
 
 # Created by https://www.gitignore.io/api/vim
 
