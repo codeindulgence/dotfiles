@@ -26,6 +26,11 @@ function fish_prompt --description 'Write out the prompt'
     echo_wrapped (tmux display-message -p '#S') purple
   end
 
+  # Check for SSH session
+  if set -q SSH_CLIENT
+    echo_wrapped Remote red
+  end
+
   # Supress username if it equals default_user
   if [ $USER != "$default_user" ]
     echo -n -s $USER@
