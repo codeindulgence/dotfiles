@@ -10,3 +10,4 @@ Configuration files for the following:
 Installation
 ------------
 `curl -L dotfiles.codeindulgence.com | sh`
+ Update with `dotfile-update`
