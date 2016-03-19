@@ -9,5 +9,6 @@ Configuration files for the following:
 
 Installation
 ------------
-`curl -L dotfiles.codeindulgence.com | bash`
+`curl -L dotfiles.codeindulgence.com | fish`
+
  Update with `dotfile-update`
