@@ -1,5 +1,7 @@
 if not set -q TMUX
-  tmux -f ~/.config/tmux/tmux.conf new -s Main
+  if not set -q SSH_CLIENT
+    tmux -f ~/.config/tmux/tmux.conf new -s Main
+  end
 end
 
 source /usr/local/share/chruby/chruby.fish
