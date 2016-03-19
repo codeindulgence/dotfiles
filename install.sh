@@ -1,7 +1,7 @@
 dotfile_dir=~/.config/dotfiles
 
 function check_dotfiles() {
-  echo Checking dotfiles repo...
+  /bin/echo Checking dotfiles repo...
   if [ -d $dotfile_dir ]; then
     cd $dotfile_dir &&
     git pull origin master
@@ -19,9 +19,9 @@ function check_programs() {
     /bin/echo -n Checking for $program:\ 
 
     if type $program > /dev/null 2>&1 ; then
-      echo Ok!
+      /bin/echo Ok!
     else
-      echo No $program! No $program!
+      /bin/echo No $program! No $program!
       error=1
     fi
   done
@@ -34,8 +34,12 @@ function symlink_programs() {
 
   for program in *; do
     /bin/echo -n Symlink $program:\ 
+    if [ -d ~/.config/$program ]; then
+      /bin/echo -n Backing up $program config.\ 
+      mv ~/.config/$program{,.bak}
+    fi
     ln -sf $path/$program ~/.config/ &&
-    echo Ok!
+    /bin/echo Ok!
   done
 }
 
