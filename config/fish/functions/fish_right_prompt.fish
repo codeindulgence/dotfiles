@@ -5,7 +5,7 @@ function fish_right_prompt
     echo_wrapped $RUBY_VERSION red
   end
 
-  if set -q CMD_DURATION
+  if [ "$CMD_DURATION" -gt 0 ]
     set -l ms (numfmt --grouping $CMD_DURATION)
     echo_wrapped {$ms}ms magenta
   end
