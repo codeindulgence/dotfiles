@@ -1,21 +1,21 @@
 #! /bin/sh
 
-function check_dotfiles() {
-  local dotfile_dir=~/.config/dotfiles
+dotfile_dir=~/.config/dotfiles
 
+function check_dotfiles() {
   echo Checking dotfiles repo...
   if [ -d $dotfile_dir ]; then
     cd $dotfile_dir &&
     git pull origin master
   else
-    git clone https://github.com/codeindulgence/dotfiles.git ~/.config/
+    git clone https://github.com/codeindulgence/dotfiles.git $dotfile_dir
   fi
 }
 
 function check_programs() {
   local error=0
 
-  cd config
+  cd $dotfile_dir/config
 
   for program in *; do
     /bin/echo -n Checking for $program:\ 
