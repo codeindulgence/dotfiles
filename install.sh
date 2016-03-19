@@ -1,5 +1,3 @@
-#! /bin/sh
-
 dotfile_dir=~/.config/dotfiles
 
 function check_dotfiles() {
