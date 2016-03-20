@@ -1,0 +1,50 @@
+# Automatically created by GitHub for Mac
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+.vimrc_local
+*.sw[pon]
+devlog
+.~*#
+.todo
+*.bak
+local*.sql
+staging*.sql
+live*.sql
+.sass-cache
+.ruby-version
+node_modules
+libpeerconnection.log
+zeus.json
+custom_plan.rb
+tags
+.cap_tasks~
+local.sql
+live.sql
+xcuserdata
+xcshareddata
+.DS_Store
+dump.rdb
