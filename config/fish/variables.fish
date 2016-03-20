@@ -53,4 +53,10 @@ set fish_user_abbreviations \
   "\x2e cd -" \
   "edit vim" \
   "gl git log --oneline --decorate --color --graph" \
-  "gdi git diff"
+  "gdi git diff" \
+  ". cd -" \
+  "... cd ../.." \
+  ".... cd ../../.." \
+  "..... cd ../../../.." \
+  "...... cd ../../../../.." \
+  "....... cd ../../../../.." \
