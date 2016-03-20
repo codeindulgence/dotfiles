@@ -1,6 +1,10 @@
 set dotfile_dir ~/.config/dotfiles
 set script (status -f)
 
+function ok
+  echo -s (set_color green) Ok! (set_color normal)
+end
+
 function check_dotfiles
   echo Checking dotfiles repo...
   if [ -d $dotfile_dir ]
@@ -17,10 +21,10 @@ function check_programs
   cd $dotfile_dir/config
 
   for program in *
-    echo -n Checking for $program:\ 
+    echo -n "Checking for $program: "
 
     if type $program > /dev/null 2>&1
-      echo Ok!
+      ok
     else
       echo No $program! No $program!
       set error 1
@@ -31,24 +35,32 @@ function check_programs
 end
 
 function symlink_programs
-  set -l config_path (dirname (readlink -f $script))/config
-  #set -l config_path "$path/config"
+  set -l config_path $dotfile_dir/config
 
-  for program in *
-    set -l program_path ~/.config/$program
-    echo -n Symlink $program:\ 
+  for program_path in $config_path/*
+    set -l program (basename $program_path)
+    set -l install_path ~/.config/$program
+    echo -n "Linking $program: "
 
-    if not [ (readlink -f $program_path) = (readlink -f $config_path/$program) ]
-      echo -n Backing up $program config.\ 
-      mv ~/.config/$program{,.bak}
-    end
-    ln -sf $config_path/$program ~/.config/
-    and echo Ok!
-  end
+    if begin
+        [ -d $install_path ];
+        and [ (readlink -f $install_path) != (readlink -f $config_path/$program) ]
+      end
+
+     echo -n -s (set_color yellow) "Backing up $program config. "
+     mv $install_path $install_path.(date +%s).bak
+   end
+
+   ln -sf $config_path/$program ~/.config
+
+   ok
+ end
+ echo
 end
 
 check_dotfiles
 and check_programs
 and symlink_programs
 
-echo (set_color green) "Cool, we're done. You can run `fish` or set it as your default with `chsh -s ...`. Enjoy!"
+and echo -s (set_color green) "Cool, we're done. You can run `fish` or set it as your default with `chsh -s ...`. Enjoy!"
+or echo -s (set_color red) "Something went wrong. Terribly terribly wrong."
