@@ -63,4 +63,6 @@ and check_programs
 and symlink_programs
 
 and echo -s (set_color green) "Cool, we're done. You can run `fish` or set it as your default with `chsh -s ...`. Enjoy!"
+and echo -s (set_color normal "  Install vim plugins with `nvim +PlugInstall`"
+and echo -s (set_color normal "  Install tmux plugins with `tmux run-shell ~/.config/tmux/tpm/bindings/install_plugins`"
 or echo -s (set_color red) "Something went wrong. Terribly terribly wrong."
