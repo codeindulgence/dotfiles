@@ -40,4 +40,17 @@ set fish_pager_color_progress cyan
 set fish_key_bindings fish_default_key_bindings
 
 # Abbreviations
-set fish_user_abbreviations "r ranger" "g git" "be bundle exec" "mk mkdir" "v nvim" "rmd rm -rf" "t tig --all" "s git status -bsu" "tailf tail -f" "\x2e cd -" "edit vim" "gl git log --oneline --decorate --color --graph" "gdi git diff"
+set fish_user_abbreviations \
+  "r ranger" \
+  "g git" \
+  "be bundle exec" \
+  "mk mkdir" \
+  "v nvim" \
+  "rmd rm -rf" \
+  "t tig --all" \
+  "s git status -bsu" \
+  "tailf tail -f" \
+  "\x2e cd -" \
+  "edit vim" \
+  "gl git log --oneline --decorate --color --graph" \
+  "gdi git diff"
