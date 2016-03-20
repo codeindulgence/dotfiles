@@ -110,6 +110,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 nnoremap <C-F> :GitFiles<CR>
 nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>f :Files<CR>
 
 " GnuPG
 Plug 'jamessan/vim-gnupg'
