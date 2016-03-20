@@ -34,7 +34,7 @@ function check_programs
   return $error
 end
 
-function symlink_programs
+function symlink_configs
   set -l config_path $dotfile_dir/config
 
   for program_path in $config_path/*
@@ -60,7 +60,7 @@ end
 
 check_dotfiles
 and check_programs
-and symlink_programs
+and symlink_configs
 
 and echo -s (set_color green) "Cool, we're done. You can run `fish` or set it as your default with `chsh -s ...`. Enjoy!"
 and echo -s (set_color normal) "  Install vim plugins with `nvim +PlugInstall`"
