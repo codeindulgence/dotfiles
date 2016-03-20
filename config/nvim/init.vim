@@ -123,6 +123,9 @@ Plug 'codeindulgence/vim-ranger'
 Plug 'codeindulgence/vim-tig'
 nnoremap <C-G> :Tig<CR>
 
+" Fish
+Plug 'dag/vim-fish', { 'for': 'fish' }
+
 call plug#end()
 
 " Options set on buffer load
