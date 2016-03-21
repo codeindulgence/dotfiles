@@ -17,5 +17,6 @@
   st = status -bsu
   check = "!git fetch && git status"
   ch = "!git check"
+	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
 [credential]
   helper = cache
