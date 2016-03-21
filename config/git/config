@@ -2,7 +2,7 @@
 	name = Nick Butler
 	email = nick@codeindulgence.com
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.config/git/ignore
 	pager = cat
 	editor = nvim +start
 [color]
