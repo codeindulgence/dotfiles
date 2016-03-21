@@ -4,6 +4,9 @@ if not set -q TMUX
   end
 end
 
-eval sh ~/.config/fish/base16-ocean.dark.sh
+
+if status --is-interactive
+  eval sh ~/.config/fish/dark.sh
+end
 source ~/.config/fish/variables.fish
 source /usr/local/share/chruby/chruby.fish
