@@ -10,7 +10,7 @@ function fish_right_prompt
     echo_wrapped {$ms}ms magenta
   end
 
-  if [ -r .env ]
+  if set -q env_loaded
     echo_wrapped ENV red
   end
 
