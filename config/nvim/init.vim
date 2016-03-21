@@ -126,7 +126,14 @@ nnoremap <C-G> :Tig<CR>
 " Fish
 Plug 'dag/vim-fish', { 'for': 'fish' }
 
+" Base16 Colours
+Plug 'chriskempson/base16-vim'
+let base16colorspace=256
+set background=dark
+
 call plug#end()
+
+colorscheme base16-ocean
 
 " Options set on buffer load
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
