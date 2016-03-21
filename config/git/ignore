@@ -48,3 +48,4 @@ xcuserdata
 xcshareddata
 .DS_Store
 dump.rdb
+.env
