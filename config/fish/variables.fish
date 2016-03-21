@@ -26,7 +26,7 @@ set fish_color_operator cyan
 set fish_color_param 81a2be
 set fish_color_quote b5bd68
 set fish_color_redirection 8abeb7
-set fish_color_search_match --background=purple
+set fish_color_search_match --background=666
 set fish_color_status red
 set fish_color_user "-o green"
 set fish_color_valid_path --underline
