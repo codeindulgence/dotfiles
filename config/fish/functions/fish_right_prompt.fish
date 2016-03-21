@@ -10,5 +10,9 @@ function fish_right_prompt
     echo_wrapped {$ms}ms magenta
   end
 
+  if [ -r .env ]
+    echo_wrapped ENV red
+  end
+
   echo_wrapped (prompt_pwd) green
 end
