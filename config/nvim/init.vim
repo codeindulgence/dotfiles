@@ -134,7 +134,9 @@ set background=dark
 
 call plug#end()
 
+" Colours
 colorscheme base16-ocean
+highlight Search ctermbg=18 ctermfg=NONE
 
 " Options set on buffer load
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
