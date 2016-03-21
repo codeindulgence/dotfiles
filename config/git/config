@@ -1,16 +1,16 @@
 [user]
-	name = Nick Butler
-	email = nick@codeindulgence.com
+  name = Nick Butler
+  email = nick@codeindulgence.com
 [core]
-	excludesfile = ~/.config/git/ignore
-	pager = cat
-	editor = nvim +start
+  excludesfile = ~/.config/git/ignore
+  pager = cat
+  editor = nvim +start
 [color]
-        ui = true
+  ui = true
 [branch]
-	autosetupmerge = always
+  autosetupmerge = always
 [push]
-	default = current
+  default = current
 [alias]
   co = checkout
   ci = commit
@@ -18,4 +18,4 @@
   check = "!git fetch && git status"
   ch = "!git check"
 [credential]
-	helper = cache
+  helper = cache
