@@ -14,7 +14,7 @@ function fish_right_prompt
 
   # Local .env file
   if set -q env_loaded
-    echo_wrapped "ENV:$env_loaded" red
+    echo_wrapped "env:$env_loaded" red
   end
 
   # PWD
