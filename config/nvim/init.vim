@@ -132,6 +132,9 @@ Plug 'chriskempson/base16-vim'
 let base16colorspace=256
 set background=dark
 
+" Terraform
+Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
+
 call plug#end()
 
 " Colours
