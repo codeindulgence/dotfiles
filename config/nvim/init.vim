@@ -38,6 +38,7 @@ set ttimeoutlen=100
 set undofile
 set wildignorecase
 set wildmode=list:full
+set shell=sh
 
 let mapleader = ' '
 
