@@ -4,10 +4,9 @@ if not set -q TMUX
   end
 end
 
-loadenv
-
 if status --is-interactive
   eval sh ~/.config/fish/base16-ocean.dark.sh
+  loadenv
 end
 
 source ~/.config/fish/variables.fish
