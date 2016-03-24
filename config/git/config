@@ -15,7 +15,7 @@
   co = checkout
   ci = commit
   st = status -bsu
-  check = "!git fetch && git status"
+  check = "!git fetch && git st"
   ch = "!git check"
 	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
 [credential]
