@@ -54,7 +54,7 @@ nnoremap ' `
 nnoremap <Leader>r :redraw!<CR>
 nnoremap v <C-V>
 nnoremap <C-V> v
-nnoremap S :%s::g<Left><Left>
+nnoremap S :%s::<Left>
 nnoremap <Leader>w :%s/\s\+$//e<CR>
 nnoremap ; :
 nnoremap : ;
