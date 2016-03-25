@@ -60,3 +60,14 @@ set fish_user_abbreviations \
   "..... cd ../../../.." \
   "...... cd ../../../../.." \
   "....... cd ../../../../.." \
+  "d dirhist" \
+  "1 cd ." \
+  "2 cd \$dirhist[2]" \
+  "3 cd \$dirhist[3]" \
+  "4 cd \$dirhist[4]" \
+  "5 cd \$dirhist[5]" \
+  "6 cd \$dirhist[6]" \
+  "7 cd \$dirhist[7]" \
+  "8 cd \$dirhist[8]" \
+  "9 cd \$dirhist[9]" \
+  "10 cd \$dirhist[10]" \

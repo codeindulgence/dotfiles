@@ -19,6 +19,19 @@ function cd --description 'Change directory'
   end
 
   builtin cd $argv[1]
+
+  # Directory history tracking
+
+  # If pwd is in the list somewhere, remove it
+  if contains "$PWD" $dirhist
+    set -e dirhist[(contains -i $PWD $dirhist)]
+  end
+
+  set -U dirhist (command pwd) $dirhist
+  if [ (count $dirhist) -gt 10 ]
+    set -U dirhist $dirhist[1..10]
+  end
+
   set -l cd_status $status
 
   if test $cd_status = 0 -a "$PWD" != "$previous"
