@@ -3,7 +3,7 @@ function loadenv
     if [ (sha1sum .env) != "$env_hash" ]
       unloadenv
       # Get the list of vars we're about to load
-      set -g env_vars (grep "^export" .env | sed 's/^export \([A-z0-9_-]*\)=.*/\1/' )
+      set -g env_vars (sed -n 's/^export \([A-z0-9_-]*\)=.*/\1/p' .env)
 
       # Save the old values if they exist
       for var in $env_vars
