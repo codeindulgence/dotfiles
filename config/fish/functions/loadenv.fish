@@ -13,7 +13,7 @@ function loadenv
       # Now load .env
       echo Loaded Environment:
       set_color green
-      sed 's/^export/ /' .env
+      sed -n 's/^export/ /p' .env
       set_color normal
       source .env
       and set -g env_loaded (basename $PWD)
