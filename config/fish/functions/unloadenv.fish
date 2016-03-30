@@ -16,5 +16,6 @@ function unloadenv
   set -e env_vars
   set -e env_vars_old
   set -e env_loaded
+  set -e env_hash
   set_color normal
 end
