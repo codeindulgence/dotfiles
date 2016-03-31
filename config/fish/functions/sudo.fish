@@ -1,3 +1,3 @@
 function sudo
-	command sudo -E $argv
+	command sudo -Es $argv
 end
