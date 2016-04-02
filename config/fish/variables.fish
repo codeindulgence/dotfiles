@@ -40,7 +40,7 @@ set fish_pager_color_progress cyan
 set fish_key_bindings fish_default_key_bindings
 
 # Abbreviations
-set fish_user_abbreviations \
+set fish_user_abbreviations $fish_user_abbreviations \
   "r ranger" \
   "g git" \
   "be bundle exec" \
