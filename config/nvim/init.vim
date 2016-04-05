@@ -139,6 +139,9 @@ Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 " GitGutter
 Plug 'airblade/vim-gitgutter'
 
+" Commentary
+Plug 'tpope/vim-commentary'
+
 call plug#end()
 
 " Colours
