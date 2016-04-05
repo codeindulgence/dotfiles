@@ -136,6 +136,9 @@ set background=dark
 " Terraform
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 
+" GitGutter
+Plug 'airblade/vim-gitgutter'
+
 call plug#end()
 
 " Colours
