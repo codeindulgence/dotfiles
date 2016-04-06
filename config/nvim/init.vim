@@ -69,6 +69,7 @@ inoremap <C-B> <Left>
 inoremap <C-C> <Esc>
 
 " Visual Mappings
+vnoremap <CR> "+y
 vnoremap <Leader>y "+y
 vnoremap <Leader>p "+p
 vnoremap v <C-V>
