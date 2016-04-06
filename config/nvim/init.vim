@@ -144,6 +144,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
 autocmd FileType terraform setlocal commentstring=#\ %s
 
+" Typescript
+Plug 'leafgarland/typescript-vim'
+
 call plug#end()
 
 " Colours
