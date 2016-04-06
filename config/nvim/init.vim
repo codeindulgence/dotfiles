@@ -141,6 +141,7 @@ Plug 'airblade/vim-gitgutter'
 
 " Commentary
 Plug 'tpope/vim-commentary'
+autocmd FileType terraform setlocal commentstring=#\ %s
 
 call plug#end()
 
