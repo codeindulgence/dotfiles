@@ -147,6 +147,9 @@ autocmd FileType terraform setlocal commentstring=#\ %s
 " Typescript
 Plug 'leafgarland/typescript-vim'
 
+" Eunuch
+Plug 'tpope/vim-eunuch'
+
 call plug#end()
 
 " Colours
