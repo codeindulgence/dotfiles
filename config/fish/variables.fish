@@ -54,6 +54,7 @@ set fish_user_abbreviations $fish_user_abbreviations \
   "edit vim" \
   "gl git log --oneline --decorate --color --graph" \
   "gdi git diff" \
+  "pw pwgen -Bys 24 1" \
   ". cd -" \
   "... cd ../.." \
   ".... cd ../../.." \
