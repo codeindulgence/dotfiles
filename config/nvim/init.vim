@@ -58,9 +58,7 @@ nnoremap S :%s::<Left>
 nnoremap <Leader>w :%s/\s\+$//e<CR>
 nnoremap ; :
 nnoremap : ;
-nnoremap <Leader>h :History<CR>
 nnoremap <Leader>o :e .<CR>
-nnoremap <Leader>a :Ag<CR>
 nnoremap ! :!
 
 " Insert Mappings
@@ -97,7 +95,15 @@ command! Install :Reload | :PlugInstall
 let g:plug_window = 'enew'
 call plug#begin('~/.config/nvim/plugged')
 
-"Fugitive
+" CtrlP
+Plug 'ctrlpvim/ctrlp.vim'
+let g:ctrlp_map = '<c-f>'
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let g:ctrlp_use_caching = 0
+nnoremap <C-b> :CtrlPBuffer<CR>
+nnoremap <Leader>m :CtrlPMRU<CR>
+
+" Fugitive
 Plug 'tpope/vim-fugitive'
 
 " Tmux Navigator
@@ -107,13 +113,6 @@ nnoremap <silent> <C-H> :TmuxNavigateLeft<cr>
 nnoremap <silent> <C-J> :TmuxNavigateDown<cr>
 nnoremap <silent> <C-K> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-L> :TmuxNavigateRight<cr>
-
-" FZF
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-nnoremap <C-F> :GitFiles<CR>
-nnoremap <Leader>b :Buffers<CR>
-nnoremap <Leader>f :Files<CR>
 
 " GnuPG
 Plug 'jamessan/vim-gnupg'
