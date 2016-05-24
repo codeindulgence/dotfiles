@@ -65,6 +65,7 @@ nnoremap ! :!
 inoremap <C-F> <Right>
 inoremap <C-B> <Left>
 inoremap <C-C> <Esc>
+inoremap <C-D> <Del>
 
 " Visual Mappings
 vnoremap <CR> "+y
