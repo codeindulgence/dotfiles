@@ -66,6 +66,8 @@ inoremap <C-F> <Right>
 inoremap <C-B> <Left>
 inoremap <C-C> <Esc>
 inoremap <C-D> <Del>
+inoremap <C-E> <End>
+inoremap <C-A> <Home>
 
 " Visual Mappings
 vnoremap <CR> "+y
