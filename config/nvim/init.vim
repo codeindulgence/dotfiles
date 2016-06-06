@@ -165,7 +165,6 @@ Plug 'jiangmiao/auto-pairs'
 " Neomake
 Plug 'neomake/neomake'
 autocmd! BufWritePost * Neomake
-let g:neomake_typescript_enabled_makers = ['tsc']
 
 call plug#end()
 
