@@ -159,6 +159,10 @@ Plug 'tpope/vim-eunuch'
 " Surround
 Plug 'tpope/vim-surround'
 
+" Delimitmate
+Plug 'raimondi/delimitmate'
+let delimitMate_expand_cr = 1
+
 call plug#end()
 
 " Colours
