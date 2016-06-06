@@ -159,9 +159,8 @@ Plug 'tpope/vim-eunuch'
 " Surround
 Plug 'tpope/vim-surround'
 
-" Delimitmate
-Plug 'raimondi/delimitmate'
-let delimitMate_expand_cr = 1
+" Auto-pairs
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
