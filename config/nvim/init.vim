@@ -147,6 +147,8 @@ Plug 'airblade/vim-gitgutter'
 " Commentary
 Plug 'tpope/vim-commentary'
 autocmd FileType terraform setlocal commentstring=#\ %s
+nmap <Leader>/ gcc
+nmap <Leader>? gcip
 
 " Typescript
 Plug 'leafgarland/typescript-vim'
