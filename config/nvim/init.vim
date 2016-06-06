@@ -156,6 +156,9 @@ Plug 'leafgarland/typescript-vim'
 " Eunuch
 Plug 'tpope/vim-eunuch'
 
+" Surround
+Plug 'tpope/vim-surround'
+
 call plug#end()
 
 " Colours
