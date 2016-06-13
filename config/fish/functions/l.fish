@@ -1,3 +1,3 @@
 function l
-	ls -ho --group-directories-first --file-type $argv
+	ls -hl --group-directories-first --file-type $argv
 end
