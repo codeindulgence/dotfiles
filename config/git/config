@@ -4,7 +4,7 @@
   signingkey = 08F7FFB6
 [core]
   excludesfile = ~/.config/git/ignore
-  pager = cat
+  pager = diff-so-fancy | less --tabs=4 -RFX
   editor = nvim +start
 [color]
   ui = true
