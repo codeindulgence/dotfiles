@@ -49,3 +49,4 @@ xcshareddata
 .DS_Store
 dump.rdb
 .env
+.*.env
