@@ -14,6 +14,7 @@ function mux
   tmux new-window
 
   for var in $vars
+    tmux send-keys -t $count "export MUXV=\"$var\""
     tmux send-keys -t $count "$cmd $var $sfx"
     if [ $count -lt (count $vars) ]
       if [ (math $count%2) -eq 0 ]
