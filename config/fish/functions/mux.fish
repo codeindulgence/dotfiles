@@ -11,10 +11,7 @@ function mux
     set sfx $argv[3]
   end
 
-  clear
-
-  for var in $vars
-  end
+  tmux new-window
 
   for var in $vars
     tmux send-keys -t $count "$cmd $var $sfx"
