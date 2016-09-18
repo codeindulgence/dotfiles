@@ -27,4 +27,5 @@ function mux
   end
 
   tmux select-layout tiled
+  tmux set-window-option synchronize-panes on
 end
