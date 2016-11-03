@@ -39,6 +39,7 @@ set undofile
 set wildignorecase
 set wildmode=list:full
 set shell=sh
+set report=0
 
 let mapleader = ' '
 
