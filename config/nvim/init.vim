@@ -77,6 +77,8 @@ vnoremap <Leader>p "+p
 vnoremap v <C-V>
 vnoremap <C-V> v
 vnoremap S :s::g<Left><Left>
+vnoremap ; :
+vnoremap : ;
 
 " Command Mappings
 cnoremap <C-A>  <Home>
