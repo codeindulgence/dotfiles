@@ -41,6 +41,7 @@ function cd --description 'Change directory'
   end
 
   loadenv
+  chruby-auto
 
   return $cd_status
 end

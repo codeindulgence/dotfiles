@@ -12,5 +12,6 @@ if status --is-interactive
   source $chruby
   end
   loadenv
+  chruby-auto
 end
 
