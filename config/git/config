@@ -21,6 +21,7 @@
   ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
   pop = stash pop
   prb = "!git stash; git pull --rebase; git stash pop"
+  amend = "commit --amend"
 [credential]
   helper = osxkeychain
 [diff]
