@@ -172,6 +172,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'neomake/neomake'
 autocmd! BufWritePost * Neomake
 
+" Rust Filetype
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+
 call plug#end()
 
 " Colours
