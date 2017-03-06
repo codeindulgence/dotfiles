@@ -40,6 +40,7 @@ set fish_pager_color_progress cyan
 set fish_key_bindings fish_default_key_bindings
 
 # Abbreviations
+abbr a tmux a
 abbr r ranger
 abbr g git
 abbr be bundle exec
