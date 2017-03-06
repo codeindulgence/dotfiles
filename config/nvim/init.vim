@@ -141,7 +141,7 @@ Plug 'dag/vim-fish', { 'for': 'fish' }
 " Base16 Colours
 Plug 'chriskempson/base16-vim'
 let base16colorspace=256
-set background=dark
+set background=light
 
 " Terraform
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
@@ -182,7 +182,6 @@ let b:csv_arrange_align = 'l*'
 call plug#end()
 
 " Colours
-colorscheme base16-ocean
 highlight Search ctermbg=18 ctermfg=NONE
 
 " Options set on buffer load

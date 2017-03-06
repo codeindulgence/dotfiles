@@ -5,7 +5,11 @@ if status --is-interactive
     end
   end
 
-  eval sh ~/.config/fish/base16-ocean.dark.sh
+  # Set colourscheme
+  if set -q _colorscheme
+    eval sh $_colorscheme
+  end
+
   source ~/.config/fish/variables.fish
   set chruby /usr/local/share/chruby/chruby.fish
   if [ -f $chruby ];
