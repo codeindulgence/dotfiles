@@ -175,6 +175,10 @@ autocmd! BufWritePost * Neomake
 " Rust Filetype
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 
+" CSV
+Plug 'chrisbra/csv.vim'
+let b:csv_arrange_align = 'l*'
+
 call plug#end()
 
 " Colours
