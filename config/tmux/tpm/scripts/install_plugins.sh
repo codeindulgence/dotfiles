@@ -44,6 +44,7 @@ install_plugin() {
 
 install_plugins() {
 	local plugins="$(tpm_plugins_list_helper)"
+  echo Plugins: $plugins
 	for plugin in $plugins; do
 		install_plugin "$plugin"
 	done
