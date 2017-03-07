@@ -153,7 +153,7 @@ Plug 'tpope/vim-commentary'
 autocmd FileType terraform setlocal commentstring=#\ %s
 nmap  gcc
 vmap  gcc
-nmap <BS> gcip
+nmap  gcip
 
 " Typescript
 Plug 'leafgarland/typescript-vim'
