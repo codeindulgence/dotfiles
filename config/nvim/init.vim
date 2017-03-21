@@ -123,6 +123,9 @@ inoremap <silent> <C-J> <Esc>:TmuxNavigateDown<cr>
 inoremap <silent> <C-K> <Esc>:TmuxNavigateUp<cr>
 inoremap <silent> <C-L> <Esc>:TmuxNavigateRight<cr>
 
+" Password generator
+command! -nargs=? Password execute ':read !pwgen' <args>
+
 " GnuPG
 Plug 'jamessan/vim-gnupg'
 let g:GPGExecutable="gpg2"
