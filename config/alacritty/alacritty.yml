@@ -196,6 +196,7 @@ key_bindings:
   - { key: Space,    mods: Control,       chars: "\x00"                        }
   - { key: B,        mods: Alt,           chars: "\eb"                         }
   - { key: F,        mods: Alt,           chars: "\ef"                         }
+  - { key: D,        mods: Alt,           chars: "\ed"                         }
   - { key: Period,   mods: Alt,           chars: "\e."                         }
   - { key: Slash,    mods: Control,       chars: "\x1f"                        }
   - { key: Slash,    mods: Control|Shift, chars: "\x1c"                        }
