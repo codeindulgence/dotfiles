@@ -11,7 +11,8 @@
 [branch]
   autosetupmerge = always
 [push]
-  default = current
+  default = simple
+  followTags = true
 [alias]
   co = checkout
   ci = commit
@@ -26,3 +27,10 @@
   helper = osxkeychain
 [diff]
   compactionHeuristic = true
+[merge]
+  ff = only
+  conflictstyle = diff3
+[commit]
+  gpgSign = true
+[status]
+  showUntrackedFiles = all
