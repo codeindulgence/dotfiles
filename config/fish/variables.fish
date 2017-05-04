@@ -40,28 +40,14 @@ set fish_pager_color_progress cyan
 set fish_key_bindings fish_default_key_bindings
 
 # Abbreviations
-abbr a tmux a
-abbr r ranger
-abbr g git
-abbr be bundle exec
-abbr mk mkdir
-abbr v nvim
-abbr rmd rm -rf
-abbr t tig --all
-abbr s git status -bsu
-abbr tailf tail -f
-abbr edit vim
-abbr gl git log --oneline --decorate --color --graph
-abbr gdi git diff
-abbr pw pwgen -Bys 24 1
 abbr . cd -
 abbr ... cd ../..
 abbr .... cd ../../..
 abbr ..... cd ../../../..
 abbr ...... cd ../../../../..
 abbr ....... cd ../../../../..
-abbr d dirhist
 abbr 1 cd .
+abbr 10 cd \$dirhist[10]
 abbr 2 cd \$dirhist[2]
 abbr 3 cd \$dirhist[3]
 abbr 4 cd \$dirhist[4]
@@ -70,4 +56,19 @@ abbr 6 cd \$dirhist[6]
 abbr 7 cd \$dirhist[7]
 abbr 8 cd \$dirhist[8]
 abbr 9 cd \$dirhist[9]
-abbr 10 cd \$dirhist[10]
+abbr a tmux a
+abbr be bundle exec
+abbr d dirhist
+abbr edit vim
+abbr g git
+abbr gdi git diff
+abbr gl git log --oneline --decorate --color --graph
+abbr mk mkdir
+abbr prb git pull --rebase
+abbr pw pwgen -Bys 24 1
+abbr r ranger
+abbr rmd rm -rf
+abbr s git status -bsu
+abbr t tig --all
+abbr tailf tail -f
+abbr v nvim
