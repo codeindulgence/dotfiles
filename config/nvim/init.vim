@@ -47,6 +47,7 @@ let mapleader = ' '
 nnoremap <Leader>/ :noh<CR>
 nnoremap <Leader>p "+p
 nnoremap <Leader>P "+P
+nnoremap <Leader>v $v^
 nnoremap <C-C> <CR>
 nnoremap <Tab> 
 nnoremap <C-N> :bnext<CR>
