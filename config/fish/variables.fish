@@ -64,7 +64,7 @@ abbr edit vim
 abbr g git
 abbr gdi git diff
 abbr gl git log --oneline --decorate --color --graph
-abbr mk mkdir
+abbr mk mkdir -p
 abbr prb git pull --rebase
 abbr pw pwgen -Bys 24 1
 abbr r ranger
