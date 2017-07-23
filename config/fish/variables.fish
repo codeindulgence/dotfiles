@@ -58,6 +58,7 @@ abbr 8 cd \$dirhist[8]
 abbr 9 cd \$dirhist[9]
 abbr a tmux a
 abbr be bundle exec
+abbr ch git check
 abbr d dirhist
 abbr edit vim
 abbr g git
