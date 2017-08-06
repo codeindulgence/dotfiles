@@ -1,3 +1,3 @@
 function l
-	ls -hl --group-directories-first --file-type $argv
+  exa -l --group-directories-first --git -h -F $argv
 end
