@@ -1,4 +1,5 @@
 set EDITOR nvim
+set -x ANSIBLE_NOCOWS 1
 
 # Git prompt
 set __fish_git_prompt_showdirtystate 'yes'
