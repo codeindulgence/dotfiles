@@ -4,6 +4,8 @@ filetype plugin indent on
 " General Options
 set autowrite
 set backspace=indent,eol,start
+set cindent
+set cinkeys-=0#
 set completeopt=menu,longest,preview
 set confirm
 set expandtab
@@ -14,22 +16,24 @@ set gdefault
 set grepprg=ag\ --nogroup\ --nocolor
 set hidden
 set ignorecase
+set indentkeys-=0#
 set lazyredraw
 set list
 set listchars=tab:⇢\ ,extends:▶,precedes:◀,trail:∙,nbsp:∙,precedes:<,extends:>
 set mouse=a
 set nojoinspaces
-set number
+set nostartofline
 set nrformats=bin,hex,alpha
+set number
 set relativenumber
+set report=0
 set ruler
 set scrolloff=2
 set secure
+set shell=sh
 set shiftwidth=2
 set smartcase
-set smartindent
 set smarttab
-set nostartofline
 set softtabstop=2
 set splitbelow
 set splitright
@@ -39,8 +43,6 @@ set ttimeoutlen=100
 set undofile
 set wildignorecase
 set wildmode=list:full
-set shell=sh
-set report=0
 
 let mapleader = ' '
 
