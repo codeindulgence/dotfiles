@@ -19,7 +19,7 @@ set ignorecase
 set indentkeys-=0#
 set lazyredraw
 set list
-set listchars=tab:⇢\ ,extends:▶,precedes:◀,trail:∙,nbsp:∙,precedes:<,extends:>
+set listchars=tab:▸\ ,extends:…,precedes:…,trail:∙,nbsp:∙,precedes:<,extends:>
 set mouse=a
 set nojoinspaces
 set nostartofline
