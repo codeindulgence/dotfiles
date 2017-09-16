@@ -135,6 +135,8 @@ Plug 'jamessan/vim-gnupg'
 
 " Ranger
 Plug 'codeindulgence/vim-ranger'
+let g:ranger_on_exit = 'bw!'
+let g:ranger_open_mode = 'edit'
 
 " Tig
 Plug 'codeindulgence/vim-tig'
