@@ -134,7 +134,7 @@ command! -nargs=? Password execute ':read !pwgen -s' <args>
 Plug 'jamessan/vim-gnupg'
 
 " Ranger
-Plug 'codeindulgence/vim-ranger'
+Plug 'Mizuchi/vim-ranger'
 let g:ranger_on_exit = 'bw!'
 let g:ranger_open_mode = 'edit'
 
