@@ -187,7 +187,9 @@ let b:csv_arrange_align = 'l*'
 call plug#end()
 
 " Colours
-highlight Search ctermbg=18 ctermfg=NONE
+highlight Search ctermbg=grey ctermfg=NONE
+highlight Visual ctermbg=grey ctermfg=white
+highlight MatchParen ctermbg=grey ctermfg=NONE
 
 " Options set on buffer load
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
