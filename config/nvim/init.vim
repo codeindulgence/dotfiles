@@ -132,7 +132,6 @@ command! -nargs=? Password execute ':read !pwgen -s' <args>
 
 " GnuPG
 Plug 'jamessan/vim-gnupg'
-let g:GPGExecutable="gpg2"
 
 " Ranger
 Plug 'codeindulgence/vim-ranger'
