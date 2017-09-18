@@ -186,6 +186,17 @@ Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'chrisbra/csv.vim'
 let b:csv_arrange_align = 'l*'
 
+" Find And Replace
+Plug 'brooth/far.vim'
+let g:far#source = 'agnvim'
+let g:far#window_layout = 'bottom'
+let g:far#window_height = 30
+let g:far#file_mask_favorites = ['.', '%']
+let g:far#result_preview = 0
+let g:far#auto_preview = 0
+nnoremap <Leader>f :F  .<Left><Left>
+
+
 call plug#end()
 
 " Colours
