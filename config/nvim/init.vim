@@ -201,7 +201,7 @@ call plug#end()
 
 " Colours
 highlight Search ctermbg=grey ctermfg=NONE
-highlight Visual ctermbg=grey ctermfg=white
+highlight Visual ctermbg=grey ctermfg=NONE
 highlight MatchParen ctermbg=grey ctermfg=NONE
 
 " Options set on buffer load
