@@ -174,6 +174,7 @@ Plug 'tpope/vim-surround'
 
 " Auto-pairs
 Plug 'jiangmiao/auto-pairs'
+let g:AutoPairsShortcutFastWrap = '<C-]>'
 
 " Neomake
 Plug 'neomake/neomake'
