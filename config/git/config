@@ -24,6 +24,7 @@
   pop = stash pop
   prb = "!git stash; git pull --rebase; git stash pop"
   amend = "commit --amend"
+  soft = "reset --soft HEAD^"
 [credential]
   helper = osxkeychain
 [diff]
