@@ -50,3 +50,4 @@ xcshareddata
 dump.rdb
 .env
 .*.env
+tmp
