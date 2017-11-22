@@ -100,6 +100,7 @@ cnoreabbrev WQ wq
 " Commands
 command! -bar Reload :source ~/.config/nvim/init.vim
 command! Install :Reload | :PlugInstall
+command! TabFix %s:	:  :
 
 " Plugins
 let g:plug_window = 'enew'
@@ -196,7 +197,6 @@ let g:far#file_mask_favorites = ['.', '%']
 let g:far#result_preview = 0
 let g:far#auto_preview = 0
 nnoremap <Leader>f :F  .<Left><Left>
-
 
 call plug#end()
 
