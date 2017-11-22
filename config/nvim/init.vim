@@ -208,3 +208,7 @@ highlight MatchParen ctermbg=grey ctermfg=NONE
 
 " Options set on buffer load
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
+
+" Restore window view on buffer change
+autocmd BufLeave * let b:winview = winsaveview()
+autocmd BufEnter * if(exists('b:winview')) | call winrestview(b:winview) | endif
