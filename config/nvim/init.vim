@@ -23,6 +23,7 @@ set listchars=tab:▸\ ,extends:…,precedes:…,trail:∙,nbsp:∙,precedes:<,e
 set mouse=a
 set nojoinspaces
 set nostartofline
+set noswapfile
 set nrformats=bin,hex,alpha
 set number
 set relativenumber
