@@ -76,7 +76,7 @@ inoremap <C-E> <End>
 inoremap <C-A> <Home>
 
 " Visual Mappings
-vnoremap <CR> "+y
+vnoremap <CR> v"+y
 vnoremap <Leader>y "+y
 vnoremap <Leader>p "+p
 vnoremap v <C-V>
