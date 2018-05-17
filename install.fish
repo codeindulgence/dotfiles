@@ -44,7 +44,7 @@ function symlink_configs
 
     if begin
         [ -d $install_path ];
-        and [ (readlink -f $install_path) != (readlink -f $config_path/$program) ]
+        and [ (greadlink -f $install_path) != (greadlink -f $config_path/$program) ]
       end
 
      echo -n -s (set_color yellow) "Backing up $program config. "

@@ -8,7 +8,7 @@ function fish_right_prompt
 
   # Command Duration
   if [ "$CMD_DURATION" -gt 0 ]
-    set -l ms (numfmt --grouping $CMD_DURATION)
+    set -l ms (gnumfmt --grouping $CMD_DURATION)
     echo_wrapped {$ms}ms magenta
   end
 
