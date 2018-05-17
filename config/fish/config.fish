@@ -13,7 +13,7 @@ if status --is-interactive
   source ~/.config/fish/variables.fish
   set chruby /usr/local/share/chruby/chruby.fish
   if [ -f $chruby ];
-  source $chruby
+    source $chruby
   end
   loadenv
   chruby-auto
