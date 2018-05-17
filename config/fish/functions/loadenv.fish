@@ -15,7 +15,7 @@ function loadenv
       echo Loaded Environment:
       set_color green
       sed -n 's/^export/ /p' .env \
-        | sed 's/\(.*\(KEY\|PASS\).*\)=\(...\).*\(...\)/\1=\3********\4/I'
+        | sed 's/\(.*\(KEY\|PASS\|SECRET\).*\)=\(...\).*\(...\)/\1=\3********\4/I'
       set_color normal
       and set -g env_loaded (basename $PWD)
       and set -g env_hash (gsha1sum .env)
