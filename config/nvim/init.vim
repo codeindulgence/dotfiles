@@ -67,6 +67,7 @@ nnoremap : ;
 nnoremap <Leader>o :e .<CR>
 nnoremap ! :!
 nnoremap <Leader>[ a -     <Esc>hhhR[ ]<Esc>A
+nnoremap <Leader>] o<Backspace> -     <Esc>hhhR[ ]<Esc>A
 nnoremap <Leader>- a - 
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
