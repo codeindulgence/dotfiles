@@ -198,6 +198,9 @@ let g:far#result_preview = 0
 let g:far#auto_preview = 0
 nnoremap <Leader>f :F  .<Left><Left>
 
+" Indent lines
+Plug 'Yggdroot/indentLine'
+
 call plug#end()
 
 " Colours
