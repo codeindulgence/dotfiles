@@ -205,6 +205,9 @@ nnoremap <Leader>f :F  .<Left><Left>
 
 " Indent lines
 Plug 'Yggdroot/indentLine'
+let g:indentLine_enabled = 0
+nnoremap <Leader>\| :IndentLinesToggle<CR>
+
 
 call plug#end()
 
