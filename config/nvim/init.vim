@@ -64,7 +64,7 @@ nnoremap S :%s::<Left>
 nnoremap <Leader>w :%s/\s\+$//e<CR>
 nnoremap ; :
 nnoremap : ;
-nnoremap <Leader>o :e .<CR>
+nnoremap <Leader><C-O> :e .<CR>
 nnoremap ! :!
 nnoremap <Leader>[ a -     <Esc>hhhR[ ]<Esc>A
 nnoremap <Leader>] o<Backspace> -     <Esc>hhhR[ ]<Esc>A
