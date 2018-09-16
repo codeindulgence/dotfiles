@@ -37,3 +37,7 @@
   gpgSign = true
 [status]
   showUntrackedFiles = all
+[tig]
+  line-graphics = utf-8
+[tig "color"]
+  cursor = black magenta
