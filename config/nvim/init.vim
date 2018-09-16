@@ -69,6 +69,8 @@ nnoremap <Leader><C-O> :e .<CR>
 nnoremap ! :!
 nnoremap <Leader>[ a -     <Esc>hhhR[ ]<Esc>A
 nnoremap <Leader>] o<Backspace> -     <Esc>hhhR[ ]<Esc>A
+nnoremap <Leader>x 0f[lrx:w<CR>
+nnoremap <Leader>X 0f[lr<Space>:w<CR>
 nnoremap <Leader>- a - 
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
