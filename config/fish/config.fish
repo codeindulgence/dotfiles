@@ -19,3 +19,10 @@ if status --is-interactive
   chruby-auto
 end
 
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /Users/nick/.config/yarn/global/node_modules/tabtab/.completions/sls.fish ]; and . /Users/nick/.config/yarn/global/node_modules/tabtab/.completions/sls.fish
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /Users/nick/.config/yarn/global/node_modules/tabtab/.completions/serverless.fish ]; and . /Users/nick/.config/yarn/global/node_modules/tabtab/.completions/serverless.fish
