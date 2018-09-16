@@ -74,6 +74,7 @@ nnoremap <Leader>X 0f[lr<Space>:w<CR>
 nnoremap <Leader>- a - 
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
+nnoremap <Leader>a gg"+yG'.
 
 " Insert Mappings
 inoremap <C-F> <Right>
