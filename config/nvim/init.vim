@@ -216,9 +216,11 @@ nnoremap <Leader>\| :IndentLinesToggle<CR>
 call plug#end()
 
 " Colours
+colorscheme base16-atelier-plateau-light
 highlight Search ctermbg=grey ctermfg=NONE
 highlight Visual ctermbg=grey ctermfg=NONE
 highlight MatchParen ctermbg=grey ctermfg=NONE
+highlight StatusLine ctermfg=8 ctermbg=18 guifg=#7e7777 guibg=#e7dfdf
 
 " Options set on buffer load
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
