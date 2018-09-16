@@ -6,6 +6,7 @@ set autowrite
 set backspace=indent,eol,start
 set cindent
 set cinkeys-=0#
+set colorcolumn=80
 set completeopt=menu,longest,preview
 set confirm
 set expandtab
