@@ -13,7 +13,7 @@ set __fish_git_prompt_color_upstream_behind red
 # Colours
 set fish_color_autosuggestion 969896
 set fish_color_command b294bb
-set fish_color_comment f0c674
+set fish_color_comment aaaaaa
 set fish_color_cwd green
 set fish_color_cwd_root red
 set fish_color_end b294bb
