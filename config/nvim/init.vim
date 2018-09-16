@@ -188,6 +188,7 @@ let g:AutoPairsShortcutFastWrap = '<C-]>'
 " Neomake
 Plug 'neomake/neomake'
 autocmd! BufWritePost * Neomake
+let g:neomake_open_list = 2
 
 " Rust Filetype
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
