@@ -212,6 +212,8 @@ Plug 'Yggdroot/indentLine'
 let g:indentLine_enabled = 0
 nnoremap <Leader>\| :IndentLinesToggle<CR>
 
+" bats.vim
+Plug 'aliou/bats.vim'
 
 call plug#end()
 
