@@ -220,6 +220,9 @@ Plug 'aliou/bats.vim'
 " Abolish
 Plug 'tpope/vim-abolish'
 
+" vim-ps1
+Plug 'PProvost/vim-ps1'
+
 call plug#end()
 
 " Colours
