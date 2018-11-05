@@ -165,6 +165,7 @@ Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 
 " GitGutter
 Plug 'airblade/vim-gitgutter'
+set signcolumn=yes
 
 " Commentary
 Plug 'tpope/vim-commentary'
