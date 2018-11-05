@@ -217,6 +217,9 @@ nnoremap <Leader>\| :IndentLinesToggle<CR>
 " bats.vim
 Plug 'aliou/bats.vim'
 
+" Abolish
+Plug 'tpope/vim-abolish'
+
 call plug#end()
 
 " Colours
