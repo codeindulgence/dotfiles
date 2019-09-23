@@ -1,5 +1,6 @@
 config/nvim/plugged
 config/fish/fish_history
+config/fish/fish_variables
 config/fish/fish_read_history
 config/fish/fishd.*
 config/tmux/plugins/
