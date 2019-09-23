@@ -86,13 +86,15 @@ inoremap <C-E> <End>
 inoremap <C-A> <Home>
 
 " Visual Mappings
-vnoremap <CR> "+y
-vnoremap <Leader>y "+y
-vnoremap <Leader>p "+p
-vnoremap v <C-V>
-vnoremap <C-V> v
-vnoremap ; :
-vnoremap : ;
+xnoremap <CR> "+y
+xnoremap <Leader>y "+y
+xnoremap <Leader>p "+p
+xnoremap v <C-V>
+xnoremap <C-V> v
+xnoremap ; :
+xnoremap : ;
+xnoremap < <gv
+xnoremap > >gv
 
 " Command Mappings
 cnoremap <C-A>  <Home>
