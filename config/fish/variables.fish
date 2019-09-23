@@ -47,16 +47,6 @@ abbr .... cd ../../..
 abbr ..... cd ../../../..
 abbr ...... cd ../../../../..
 abbr ....... cd ../../../../..
-abbr 1 cd .
-abbr 10 cd \$dirhist[10]
-abbr 2 cd \$dirhist[2]
-abbr 3 cd \$dirhist[3]
-abbr 4 cd \$dirhist[4]
-abbr 5 cd \$dirhist[5]
-abbr 6 cd \$dirhist[6]
-abbr 7 cd \$dirhist[7]
-abbr 8 cd \$dirhist[8]
-abbr 9 cd \$dirhist[9]
 abbr a tmux a
 abbr be bundle exec
 abbr ch git check
