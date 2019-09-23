@@ -1,22 +1,5 @@
-function fish_right_prompt
-  printf '%s' (__fish_git_prompt)
+function fish_right_prompt \
+    --description "Let user override prompt"
 
-  # Ruby Version
-  if set -q RUBY_VERSION
-    echo_wrapped $RUBY_VERSION red
-  end
-
-  # Command Duration
-  if [ "$CMD_DURATION" -gt 0 ]
-    set -l ms (gnumfmt --grouping $CMD_DURATION)
-    echo_wrapped {$ms}ms magenta
-  end
-
-  # Local .env file
-  if set -q env_loaded
-    echo_wrapped "env:$env_loaded" red
-  end
-
-  # PWD
-  echo_wrapped (prompt_pwd) green
+    printf "%s%s%s" $pure_color_right_prompt "$pure_right_prompt" $pure_color_normal
 end
