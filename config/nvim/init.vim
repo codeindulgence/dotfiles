@@ -49,7 +49,7 @@ set wildmode=list:full
 let mapleader = ' '
 
 " Normal mode Mappings
-nnoremap <Leader>/ :noh<CR>
+nnoremap <silent> <Leader>/ :noh<CR>
 nnoremap <Leader>p "+p
 nnoremap <Leader>P "+P
 nnoremap <Leader>v $v^
