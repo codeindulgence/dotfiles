@@ -75,6 +75,7 @@ nnoremap <Leader>- a -
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
 nnoremap <Leader>a gg"+yG'.
+nnoremap <Leader>s :GetHi<CR>
 
 " Insert Mappings
 inoremap <C-F> <Right>
@@ -110,6 +111,7 @@ cnoreabbrev WQ wq
 command! -bar Reload :source ~/.config/nvim/init.vim
 command! Install :Reload | :PlugInstall
 command! TabFix %s:	:  :
+command! GetHi :echo synIDattr(synIDtrans(synID(line("."),col("."),1)),"name")
 
 " Plugins
 let g:plug_window = 'enew'
@@ -157,8 +159,6 @@ Plug 'dag/vim-fish', { 'for': 'fish' }
 
 " Base16 Colours
 Plug 'chriskempson/base16-vim'
-let base16colorspace=256
-set background=light
 
 " Terraform
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
@@ -226,11 +226,11 @@ Plug 'PProvost/vim-ps1'
 call plug#end()
 
 " Colours
-colorscheme base16-atelier-plateau-light
-highlight Search ctermbg=grey ctermfg=NONE
-highlight Visual ctermbg=grey ctermfg=NONE
-highlight MatchParen ctermbg=grey ctermfg=NONE
-highlight StatusLine ctermfg=8 ctermbg=18 guifg=#7e7777 guibg=#e7dfdf
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+highlight Search ctermbg=19 ctermfg=NONE
 
 " Options set on buffer load
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro

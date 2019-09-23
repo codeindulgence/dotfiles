@@ -6,9 +6,8 @@ if status --is-interactive
   end
 
   # Set colourscheme
-  if set -q _colorscheme
-    eval sh $_colorscheme
-  end
+  set BASE16_SHELL "$HOME/.config/base16-shell/"
+  source "$BASE16_SHELL/profile_helper.fish"
 
   source ~/.config/fish/variables.fish
   set chruby /usr/local/share/chruby/chruby.fish
