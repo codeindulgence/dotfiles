@@ -119,14 +119,6 @@ command! GetHi :echo synIDattr(synIDtrans(synID(line("."),col("."),1)),"name")
 let g:plug_window = 'enew'
 call plug#begin('~/.config/nvim/plugged')
 
-" CtrlP
-Plug 'ctrlpvim/ctrlp.vim'
-let g:ctrlp_map = '<c-f>'
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-let g:ctrlp_use_caching = 0
-nnoremap <C-b> :CtrlPBuffer<CR>
-nnoremap <Leader>m :CtrlPMRU<CR>
-
 " Fugitive
 Plug 'tpope/vim-fugitive'
 
@@ -224,6 +216,16 @@ Plug 'tpope/vim-abolish'
 
 " vim-ps1
 Plug 'PProvost/vim-ps1'
+
+" fzf
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+nnoremap <C-f> :GFiles -co --exclude-standard<CR>
+nnoremap <C-b> :Buffers<CR>
+nnoremap <C-h> :History<CR>
+nnoremap <C-s> :Rg 
+nnoremap <Leader>; :History:<CR>
+nnoremap q/ :History/<CR>
 
 call plug#end()
 
