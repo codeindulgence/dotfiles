@@ -58,11 +58,32 @@ function symlink_configs
  echo
 end
 
+function install_base16
+  set BASE16_SHELL "$HOME/.config/base16-shell/"
+  if not [ -d $BASE16_SHELL ]
+    git clone https://github.com/chriskempson/base16-shell.git $BASE16_SHELL
+  end
+end
+
+function set_fish_as_default
+  set fish_path (which fish)
+  grep -q $fish_path /etc/shells
+  or {
+    echo 'Add fish to /etc/shells (requires password)'
+    echo $fish_path | sudo tee -a /etc/shells
+  }
+  dscl . -read ~/ UserShell | grep -q fish
+  or {
+    echo 'Set fish as default shell (requires password)'
+    chsh -s $fish_path
+  }
+end
+
 check_dotfiles
 and check_programs
 and symlink_configs
+and set_fish_as_default
+and install_base16
 
 and echo -s (set_color green) "Cool, we're done. You can run `fish` or set it as your default with `chsh -s ...`. Enjoy!"
-and echo -s (set_color normal) "  Install vim plugins with `nvim +PlugInstall`"
-and echo -s (set_color normal) "  Install tmux plugins with `tmux run-shell ~/.config/tmux/tpm/bindings/install_plugins`"
 or echo -s (set_color red) "Something went wrong. Terribly terribly wrong."
