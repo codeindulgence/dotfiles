@@ -109,5 +109,5 @@ cask "vlc"
 cask "whatsapp"
 
 # App Store
-mas "Amphetamine"
-mas "Wunderlist"
+mas "Amphetamine", id: 937984704
+mas "Wunderlist",  id: 410628904
