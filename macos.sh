@@ -1,11 +1,12 @@
+dotfile_path=~/code/projects/dotfiles
 # Setup some folders
 mkdir -p ~/code/{work,projects,community,hello,courses}
 mkdir -p ~/.config
 
-git clone https://github.com/codeindulgence/dotfiles.git ~/code/projects/dotfiles
-ln -s ~/code/projects/dotfiles ~/.config/dotfiles
-
-xcode-select --install
+if [ ! -d $dotfile_path ]; then
+  git clone https://github.com/codeindulgence/dotfiles.git $dotfile_path
+fi
+ln -s $dotfile_path ~/.config/dotfiles
 
 github_raw="https://raw.githubusercontent.com"
 homebrew_url="$github_raw/Homebrew/install/master/install"
