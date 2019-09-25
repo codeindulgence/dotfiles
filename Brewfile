@@ -107,3 +107,7 @@ cask "snappy"
 cask "tableplus"
 cask "vlc"
 cask "whatsapp"
+
+# App Store
+mas "Amphetamine"
+mas "Wunderlist"
