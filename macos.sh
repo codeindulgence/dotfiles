@@ -6,7 +6,7 @@ mkdir -p ~/.config
 if [ ! -d $dotfile_path ]; then
   git clone https://github.com/codeindulgence/dotfiles.git $dotfile_path
 fi
-ln -s $dotfile_path ~/.config/dotfiles
+ln -sf $dotfile_path ~/.config/dotfiles
 
 github_raw="https://raw.githubusercontent.com"
 homebrew_url="$github_raw/Homebrew/install/master/install"
