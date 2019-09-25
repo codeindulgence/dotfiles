@@ -1,3 +1,3 @@
 function l
-  exa -l --group-directories-first --git -h -F $argv
+  lsd -l --date relative --blocks permission,user,size,date,name --group-dirs first $argv
 end
