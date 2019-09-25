@@ -6,8 +6,8 @@ if status --is-interactive
   end
 
   # Set colourscheme
-  set BASE16_SHELL "$HOME/.config/base16-shell/"
-  source "$BASE16_SHELL/profile_helper.fish"
+  set BASE16_THEME materia
+  eval sh '"'(realpath ~/.base16_theme)'"'
 
   source ~/.config/fish/variables.fish
 end
