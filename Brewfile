@@ -1,3 +1,7 @@
+# Taps
+tap "homebrew/cask-fonts"
+
+# Formulas
 brew "ansible"
 brew "aria2"
 brew "aspell"
@@ -88,7 +92,7 @@ cask "docker"
 cask "dozer"
 cask "dropbox"
 cask "firefox"
-cask "homebrew/cask-fonts/font-monofur-nerd-font"
+cask "font-monofur-nerd-font"
 cask "gimp"
 cask "google-chrome"
 cask "marshallofsound-google-play-music-player"
