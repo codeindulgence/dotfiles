@@ -84,6 +84,7 @@ cask "1password"
 cask "alfred"
 cask "amazon-photos"
 cask "appcleaner"
+cask "battle-net"
 cask "bettertouchtool"
 cask "bit-slicer"
 cask "boom-3d"
@@ -107,10 +108,15 @@ cask "skype"
 cask "skype-for-business"
 cask "slack"
 cask "snappy"
+cask "steam"
 cask "tableplus"
 cask "vlc"
 cask "whatsapp"
+cask "zazu"
 
 # App Store
 mas "Amphetamine", id: 937984704
 mas "Wunderlist",  id: 410628904
+mas "Snappy",      id: 512617038
+mas "Unsplash",    id: 1284863847
+mas "Polarr",      id: 1077124956
