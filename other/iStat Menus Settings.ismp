@@ -632,14 +632,15 @@
 				<key>format</key>
 				<array>
 					<array>
-						<string>h</string>
+						<string>HH</string>
 						<string>':'</string>
 						<string>mm</string>
 						<string>':'</string>
 						<string>ss</string>
 						<string>' '</string>
 						<string>MMM</string>
-						<string>M</string>
+						<string>' '</string>
+						<string>d</string>
 					</array>
 					<array/>
 				</array>
