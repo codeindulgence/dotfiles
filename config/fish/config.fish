@@ -5,6 +5,8 @@ if status --is-interactive
     end
   end
 
+  set -g pure_right_prompt (echo_wrapped $tmux_session_name blue)
+
   # Set colourscheme
   set BASE16_THEME materia
   eval sh '"'(realpath ~/.base16_theme)'"'
