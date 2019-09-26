@@ -1,14 +1,8 @@
 set EDITOR nvim
 set -x ANSIBLE_NOCOWS 1
 
-# Git prompt
-set __fish_git_prompt_showdirtystate 'yes'
-set __fish_git_prompt_showstashstate 'yes'
-set __fish_git_prompt_showuntrackedfiles 'yes'
-set __fish_git_prompt_showupstream 'yes'
-set __fish_git_prompt_color_branch blue
-set __fish_git_prompt_color_upstream_ahead green
-set __fish_git_prompt_color_upstream_behind red
+# Biome
+set -g _biome_mask_char ''
 
 # Colours
 set fish_color_autosuggestion 969896
@@ -40,28 +34,28 @@ set fish_pager_color_progress cyan
 # Bindings
 set fish_key_bindings fish_default_key_bindings
 
-# Abbreviations
-abbr . cd -
-abbr ... cd ../..
-abbr .... cd ../../..
-abbr ..... cd ../../../..
-abbr ...... cd ../../../../..
-abbr ....... cd ../../../../..
-abbr a tmux a
-abbr be bundle exec
-abbr ch git check
-abbr d dirhist
-abbr edit vim
-abbr g git
-abbr gdi git diff
-abbr gl git log --oneline --decorate --color --graph
-abbr mk mkdir -p
-abbr prb git prb
-abbr pw pwgen -Bys 24 1
-abbr r ranger
-abbr rm trash
-abbr rmd rm -rf
-abbr s git status -bsu
-abbr t tig --all
-abbr tailf tail -f
-abbr v nvim
+# # Abbreviations
+# abbr . cd -
+# abbr ... cd ../..
+# abbr .... cd ../../..
+# abbr ..... cd ../../../..
+# abbr ...... cd ../../../../..
+# abbr ....... cd ../../../../..
+# abbr a tmux a
+# abbr be bundle exec
+# abbr ch git check
+# abbr d dirhist
+# abbr edit vim
+# abbr g git
+# abbr gdi git diff
+# abbr gl git log --oneline --decorate --color --graph
+# abbr mk mkdir -p
+# abbr prb git prb
+# abbr pw pwgen -Bys 24 1
+# abbr r ranger
+# abbr rm trash
+# abbr rmd rm -rf
+# abbr s git status -bsu
+# abbr t tig --all
+# abbr tailf tail -f
+# abbr v nvim
