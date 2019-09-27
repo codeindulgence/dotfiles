@@ -1,5 +1,6 @@
 # Taps
 tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
 
 # Formulas
 brew "ansible"
@@ -81,7 +82,7 @@ brew "xz"
 
 # Casks
 cask "1password"
-cask "alfred"
+cask "alfred3"
 cask "amazon-photos"
 cask "appcleaner"
 cask "battle-net"
