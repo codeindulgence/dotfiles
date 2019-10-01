@@ -1,0 +1,1 @@
+/Users/nick/code/projects/biome-fish/conf.d/biome.fish

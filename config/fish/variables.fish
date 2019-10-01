@@ -40,6 +40,10 @@ set fish_pager_color_progress cyan
 # Bindings
 set fish_key_bindings fish_default_key_bindings
 
+# Biome
+set -g _biome_mask_char ''
+set -g _biome_password supercoolawesomesecretpassword
+
 # Abbreviations
 abbr . cd -
 abbr ... cd ../..

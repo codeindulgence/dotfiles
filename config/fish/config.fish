@@ -14,4 +14,5 @@ if status --is-interactive
   end
 
   source ~/.config/fish/variables.fish
+  biome enter .
 end
