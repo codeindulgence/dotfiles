@@ -6,7 +6,5 @@
 	<array>
 		<string>features.websearch.duckduckgo.fallback</string>
 	</array>
-	<key>showContacts</key>
-	<false/>
 </dict>
 </plist>
