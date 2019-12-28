@@ -50988,10 +50988,14 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>530 476 620 392 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 1680 1050 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>214 274 1130 524 0 0 1680 1027 </string>
+	<string>138 180 1450 764 0 0 1680 1027 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>233 78 1130 524 0 0 1680 1027 </string>
 	<key>NeverWarnAboutShortLivedSessions_55EEEB09-320B-4DF4-869D-A8F359449A71</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -51645,7 +51649,7 @@
 			<key>Non-ASCII Ligatures</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MonofurNerdFontComplete- 15</string>
+			<string>MonofurNerdFontCompleteM- 15</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -51818,6 +51822,8 @@
 			<false/>
 			<key>Use Italic Font</key>
 			<true/>
+			<key>Use Non-ASCII Font</key>
+			<false/>
 			<key>Vertical Spacing</key>
 			<real>0.79000000000000004</real>
 			<key>Visual Bell</key>
@@ -53286,6 +53292,7 @@
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
+		<string>Monofur Nerd Font Mono</string>
 		<string>Monofur Nerd Font</string>
 		<string>Menlo</string>
 	</array>
@@ -53294,14 +53301,14 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1680, 1050}}</string>
 		<key>topLeft</key>
-		<string>{747, 1010}</string>
+		<string>{349, 890}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>A53456E4-BBF3-484F-A392-4508940E1967</string>
 	<key>NoSyncLastTipTime</key>
-	<real>591365886.35288298</real>
+	<real>592180822.44602704</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>7</integer>
+	<integer>8</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -54007,6 +54014,13 @@
 	<key>NoSyncTipsToNotShow</key>
 	<array>
 		<string>000</string>
+		<string>0000</string>
+		<string>0001</string>
+		<string>0002</string>
+		<string>0003</string>
+		<string>0004</string>
+		<string>0005</string>
+		<string>0006</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
@@ -54078,9 +54092,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-09-28T11:41:56Z</date>
+	<date>2019-10-07T22:34:40Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
+	<key>SUUpdateRelaunchingMarker</key>
+	<true/>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
