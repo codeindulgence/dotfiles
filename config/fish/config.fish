@@ -14,5 +14,6 @@ if status --is-interactive
   end
 
   source ~/.config/fish/variables.fish
+  status --is-interactive; and source (rbenv init -|psub)
   biome enter .
 end
