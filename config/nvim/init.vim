@@ -4,8 +4,11 @@ filetype plugin indent on
 " General Options
 set autowrite
 set backspace=indent,eol,start
+set nobackup
+set nowritebackup
 set cindent
 set cinkeys-=0#
+set cmdheight=2
 set colorcolumn=80
 set completeopt=menu,longest,preview
 set confirm
@@ -34,6 +37,7 @@ set scrolloff=2
 set secure
 set shell=sh
 set shiftwidth=2
+set shortmess+=c
 set smartcase
 set smarttab
 set softtabstop=2
@@ -42,6 +46,7 @@ set splitright
 set tabstop=2
 set ttimeout
 set ttimeoutlen=100
+set updatetime=300
 set undofile
 set wildignorecase
 set wildmode=list:full
@@ -226,6 +231,31 @@ nnoremap <C-h> :History<CR>
 nnoremap <C-s> :Rg 
 nnoremap <Leader>; :History:<CR>
 nnoremap q/ :History/<CR>
+
+" CoC
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+inoremap <silent><expr> <s-enter> coc#refresh()
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
 
 call plug#end()
 
