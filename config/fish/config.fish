@@ -2,6 +2,8 @@ if status --is-interactive
   if not set -q TMUX
     if not set -q SSH_CLIENT
       tmux attach; or tmux -f ~/.config/tmux/tmux.conf new-session -s Main
+    else
+      set -g pure_right_prompt (echo_wrapped REMOTE red)
     end
   else
     set -g pure_right_prompt (echo_wrapped $tmux_session_name blue)
