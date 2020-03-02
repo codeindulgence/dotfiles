@@ -14,6 +14,14 @@ if status --is-interactive
   end
 
   source ~/.config/fish/variables.fish
-  status --is-interactive; and source (rbenv init -|psub)
+
+  # Load Ruby envs/versions
+  source (rbenv init -|psub)
+  # Load Scala env
+  source (scalaenv init -|psub)
+  # Load Python envs/versions
+  pyenv init - | source
+  pyenv virtualenv-init - | source
+
   biome enter .
 end
