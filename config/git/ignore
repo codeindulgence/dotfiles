@@ -31,6 +31,7 @@ Temporary Items
 .DS_Store
 .cap_tasks~
 .env
+.biome
 .notes.md
 .ruby-version
 .sass-cache
