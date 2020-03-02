@@ -4,6 +4,19 @@
 <dict>
 	<key>customSites</key>
 	<dict>
+		<key>755B2264-6B74-448C-8D5F-C7212DB705A6</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>bom</string>
+			<key>text</key>
+			<string>Melbourne Weather</string>
+			<key>url</key>
+			<string>http://www.bom.gov.au/vic/forecasts/melbourne.shtml</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>F6C2E6A2-50B3-4BC7-B537-DFA51C477C09</key>
 		<dict>
 			<key>enabled</key>
