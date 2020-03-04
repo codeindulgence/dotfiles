@@ -65,24 +65,9 @@ function install_base16
   end
 end
 
-function set_fish_as_default
-  set fish_path (which fish)
-  grep -q $fish_path /etc/shells
-  or {
-    echo 'Add fish to /etc/shells (requires password)'
-    echo $fish_path | sudo tee -a /etc/shells
-  }
-  dscl . -read ~/ UserShell | grep -q fish
-  or {
-    echo 'Set fish as default shell (requires password)'
-    chsh -s $fish_path
-  }
-end
-
 check_dotfiles
 and check_programs
 and symlink_configs
-and set_fish_as_default
 and install_base16
 
 and echo -s (set_color green) "Cool, we're done. You can run `fish` or set it as your default with `chsh -s ...`. Enjoy!"
