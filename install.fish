@@ -44,7 +44,7 @@ function symlink_configs
 
     if begin
         [ -d $install_path ];
-        and [ (greadlink -f $install_path) != (greadlink -f $config_path/$program) ]
+        and [ (readlink -f $install_path) != (readlink -f $config_path/$program) ]
       end
 
      echo -n -s (set_color yellow) "Backing up $program config. "
@@ -71,4 +71,6 @@ and symlink_configs
 and install_base16
 
 and echo -s (set_color green) "Cool, we're done. You can run `fish` or set it as your default with `chsh -s ...`. Enjoy!"
-or echo -s (set_color red) "Something went wrong. Terribly terribly wrong." (set_color normal)
+or echo -s (set_color red) "Something went wrong. Terribly terribly wrong."
+
+echo (set_color normal)
