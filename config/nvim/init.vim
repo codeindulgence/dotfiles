@@ -226,12 +226,21 @@ Plug 'PProvost/vim-ps1'
 " fzf
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
-nnoremap <C-f> :GFiles -co --exclude-standard<CR>
+nnoremap <C-f> :GitOrFiles<CR>
 nnoremap <C-b> :Buffers<CR>
 nnoremap <C-h> :History<CR>
 nnoremap <C-s> :Rg 
 nnoremap <Leader>; :History:<CR>
 nnoremap q/ :History/<CR>
+
+function! GitOrFiles()
+  if exists("b:git_dir")
+    call fzf#vim#gitfiles("-co --exclude-standard")
+  else
+    call fzf#vim#files("")
+  endif
+endfunction
+command! -nargs=* -bang GitOrFiles call GitOrFiles()
 
 " CoC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
