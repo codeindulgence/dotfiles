@@ -53,3 +53,8 @@ tmp
 xcshareddata
 xcuserdata
 zeus.json
+
+# Scala metals bloop files
+.bloop
+metals.sbt
+.scalafmt.conf
