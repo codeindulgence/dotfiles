@@ -41,3 +41,6 @@
   line-graphics = utf-8
 [tig "color"]
   cursor = black magenta
+[rebase]
+  autoSquash = true
+  autoStash = true
