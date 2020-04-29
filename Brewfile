@@ -166,9 +166,10 @@ cask "whatsapp"
 cask "zazu"
 
 # App Store
-mas "Amphetamine", id: 937984704
-mas "Wunderlist",  id: 410628904
-mas "Snappy",      id: 512617038
-mas "Unsplash",    id: 1284863847
-mas "Polarr",      id: 1077124956
-mas "XCode",       id: 497799835
+mas "Amphetamine",     id: 937984704
+mas "Wunderlist",      id: 410628904
+mas "Snappy",          id: 512617038
+mas "Unsplash",        id: 1284863847
+mas "Polarr",          id: 1077124956
+mas "XCode",           id: 497799835
+mas "Microsoft To Do", id: 1274495053
