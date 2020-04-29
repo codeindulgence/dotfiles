@@ -6,5 +6,11 @@
 	<array>
 		<string>features.websearch.duckduckgo.fallback</string>
 	</array>
+	<key>showDocuments</key>
+	<true/>
+	<key>showFolders</key>
+	<true/>
+	<key>showImages</key>
+	<true/>
 </dict>
 </plist>

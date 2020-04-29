@@ -8,9 +8,11 @@
 		<true/>
 		<key>alfred.action.emailto</key>
 		<true/>
+		<key>alfred.action.findsimilar</key>
+		<true/>
 		<key>alfred.action.openterminalhere</key>
 		<true/>
-		<key>alfred.action.revealinfinder</key>
+		<key>alfred.action.recent</key>
 		<true/>
 		<key>alfred.action.showpackagecontents</key>
 		<true/>
