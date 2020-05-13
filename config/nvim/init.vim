@@ -83,6 +83,9 @@ nnoremap <Leader>a gg"+yG'.
 nnoremap <Leader>s :GetHi<CR>
 nnoremap <Leader>q gqip
 nnoremap <Leader>g :Git 
+nnoremap <Leader>_ yyp$v^r-
+nnoremap <Leader>= yyp$v^r=
+nnoremap <Leader>d :%g::d<Left><Left>
 
 " Insert Mappings
 inoremap <C-F> <Right>
