@@ -4,6 +4,7 @@ tap "homebrew/cask-versions"
 tap "homebrew/cask-drivers"
 tap "isacikgoz/taps"
 tap "microsoft/mssql-release", "https://github.com/Microsoft/homebrew-mssql-release"
+tap "keys-pub/tap"
 
 # Formulas
 
@@ -138,6 +139,7 @@ cask "iterm2"
 cask "itsycal"
 cask "kap"
 cask "keybase"
+cask "keys"
 cask "kindle"
 cask "logitech-gaming-software"
 cask "mark-text"
@@ -148,6 +150,8 @@ cask "microsoft-teams"
 cask "monodraw"
 cask "opera"
 cask "postgres"
+cask "qlmarkdown"
+cask "qlstephen"
 cask "razer-synapse"
 cask "signal"
 cask "skype"
@@ -167,9 +171,8 @@ cask "zazu"
 
 # App Store
 mas "Amphetamine",     id: 937984704
-mas "Wunderlist",      id: 410628904
 mas "Snappy",          id: 512617038
 mas "Unsplash",        id: 1284863847
 mas "Polarr",          id: 1077124956
 mas "XCode",           id: 497799835
-mas "Microsoft To Do", id: 1274495053
+mas "todoist",         id: 585829637
