@@ -50890,7 +50890,7 @@
 	<key>Default Bookmark Guid</key>
 	<string>55EEEB09-320B-4DF4-869D-A8F359449A71</string>
 	<key>DimBackgroundWindows</key>
-	<false/>
+	<true/>
 	<key>DimInactiveSplitPanes</key>
 	<true/>
 	<key>DimOnlyText</key>
@@ -53323,7 +53323,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>593688322.78717303</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>31</integer>
+	<integer>35</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -54140,7 +54140,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-04-29T02:54:33Z</date>
+	<date>2020-05-12T03:28:18Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -54162,7 +54162,7 @@
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.40000000596046448</real>
+	<real>0.46256094858156027</real>
 	<key>StatusBarPosition</key>
 	<integer>0</integer>
 	<key>SwitchTabModifier</key>
