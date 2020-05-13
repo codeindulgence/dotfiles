@@ -1,1 +1,0 @@
-/usr/local/Cellar/pass/1.7.1/share/fish/vendor_completions.d/pass.fish
