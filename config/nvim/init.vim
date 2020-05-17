@@ -271,6 +271,12 @@ function! s:show_documentation()
   endif
 endfunction
 
+Plug 'jgdavey/tslime.vim'
+let g:tslime_always_current_session = 1
+let g:tslime_always_current_window = 1
+nmap <S-Return> V<Plug>SendSelectionToTmux j
+vmap <S-Return> <Plug>SendSelectionToTmux
+
 call plug#end()
 
 " Colours
