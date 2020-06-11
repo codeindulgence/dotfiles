@@ -236,6 +236,7 @@ nnoremap <C-h> :History<CR>
 nnoremap <C-s> :Rg 
 nnoremap <Leader>; :History:<CR>
 nnoremap q/ :History/<CR>
+imap <c-x><c-f> <plug>(fzf-complete-path)
 
 function! GitOrFiles()
   if exists("b:git_dir")
