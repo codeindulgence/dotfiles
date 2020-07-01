@@ -51398,6 +51398,13 @@
 					<key>Text</key>
 					<string></string>
 				</dict>
+				<key>0xd-0x20000</key>
+				<dict>
+					<key>Action</key>
+					<integer>10</integer>
+					<key>Text</key>
+					<string>[13;2u</string>
+				</dict>
 				<key>0xf700-0x220000</key>
 				<dict>
 					<key>Action</key>
@@ -53314,14 +53321,14 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1680, 1050}}</string>
 		<key>topLeft</key>
-		<string>{98, 596}</string>
+		<string>{234, 821}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>A53456E4-BBF3-484F-A392-4508940E1967</string>
 	<key>NoSyncLastTipTime</key>
 	<real>593688322.78717303</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>37</integer>
+	<integer>38</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -54138,7 +54145,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-05-14T03:28:22Z</date>
+	<date>2020-05-20T03:28:43Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
