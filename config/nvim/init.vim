@@ -191,10 +191,10 @@ Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 let g:AutoPairsShortcutFastWrap = '<C-]>'
 
-" Neomake
-Plug 'neomake/neomake'
-autocmd! BufWritePost * Neomake
-let g:neomake_open_list = 2
+" " Neomake
+" Plug 'neomake/neomake'
+" autocmd! BufWritePost * Neomake
+" let g:neomake_open_list = 2
 
 " Rust Filetype
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
@@ -249,6 +249,8 @@ command! -nargs=* -bang GitOrFiles call GitOrFiles()
 
 " CoC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+set statusline^=%f\ \|\ %{coc#status()}
+let g:coc_enable_locationlist = 0
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
