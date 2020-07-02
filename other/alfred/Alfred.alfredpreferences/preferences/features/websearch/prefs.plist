@@ -17,6 +17,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>B08FBD01-5ECB-4B9C-A398-3B5BDE17E4C4</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>jw</string>
+			<key>text</key>
+			<string>Just Watch</string>
+			<key>url</key>
+			<string>https://www.justwatch.com/au/search?sort_by=release_year&amp;q={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>F6C2E6A2-50B3-4BC7-B537-DFA51C477C09</key>
 		<dict>
 			<key>enabled</key>
