@@ -94,6 +94,8 @@ inoremap <C-C> <Esc>
 inoremap <C-D> <Del>
 inoremap <C-E> <End>
 inoremap <C-A> <Home>
+" Disable SQL completion leader
+let g:ftplugin_sql_omni_key = '<C-V>'
 
 " Visual Mappings
 xnoremap <CR> "+y
@@ -105,6 +107,7 @@ xnoremap ; :
 xnoremap : ;
 xnoremap < <gv
 xnoremap > >gv
+xnoremap <C-B> '>a**'<i**'>
 
 " Command Mappings
 cnoremap <C-A>  <Home>
@@ -249,7 +252,6 @@ command! -nargs=* -bang GitOrFiles call GitOrFiles()
 
 " CoC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-set statusline^=%f\ \|\ %{coc#status()}
 let g:coc_enable_locationlist = 0
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :

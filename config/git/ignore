@@ -39,7 +39,6 @@ Temporary Items
 .vimrc_local
 .~*#
 custom_plan.rb
-devlog
 dump.rdb
 libpeerconnection.log
 live*.sql
