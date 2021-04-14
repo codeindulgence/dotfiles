@@ -10,6 +10,9 @@ set __fish_git_prompt_color_branch blue
 set __fish_git_prompt_color_upstream_ahead green
 set __fish_git_prompt_color_upstream_behind red
 
+# Use fd for fzf
+set -Ux FZF_DEFAULT_COMMAND 'fd --no-ignore-vcs -t f'
+
 # Colours
 set fish_color_autosuggestion 969896
 set fish_color_command b294bb
