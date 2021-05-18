@@ -19,15 +19,39 @@ if status --is-interactive
 
   source ~/.config/fish/variables.fish
 
-  # Load Ruby envs/versions
-  type -q rbenv; and source (rbenv init -|psub)
-  # Load Scala env
-  type -q scalaenv; and source (scalaenv init -|psub)
-  # Load Python envs/versions
-  if type -q pyenv
-    pyenv init - | source
-    pyenv virtualenv-init - | source
+  function _dev_env --on-event fish_prompt
+    # Load Ruby envs/versions
+    if type -q rbenv
+      if test -r .ruby-version
+        if test (type -t rbenv) != 'function'
+          source (rbenv init - | psub)
+        end
+      end
+    end
+
+    # Load Scala env
+    if type -q scalaenv
+      if test -r .scala-version
+        if test (type -t scalaenv) != 'function'
+          source (scalaenv init - | psub)
+        end
+      end
+    end
+
+    # Load Python envs/versions
+    if type -q pyenv
+      if test -r .python-version
+        if test (type -t pyenv) != 'function'
+          pyenv init - | source
+        end
+
+        if type -q _pyenv_virtualenv_hook
+          pyenv virtualenv-init - | source
+        end
+      end
+    end
   end
 
   type -q biome; and biome enter .
+
 end
