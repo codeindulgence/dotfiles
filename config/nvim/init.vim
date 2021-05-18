@@ -283,6 +283,11 @@ vmap <S-Return> <Plug>SendSelectionToTmux
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+" Vlang
+Plug 'ollykel/v-vim', { 'for': 'v' }
+let g:v_autofmt_bufwritepre = 1
+autocmd Filetype vlang setlocal listchars+=tab:\ \ 
+
 call plug#end()
 
 " Colours
