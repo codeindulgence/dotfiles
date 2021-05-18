@@ -296,6 +296,15 @@ Plug 'ollykel/v-vim', { 'for': 'v' }
 let g:v_autofmt_bufwritepre = 1
 autocmd Filetype vlang setlocal listchars+=tab:\ \ 
 
+" Elixir
+Plug 'elixir-editors/vim-elixir'
+
+" Ruby/Rails
+Plug 'tpope/vim-rails'
+
+" DB
+Plug 'tpope/vim-dadbod'
+
 call plug#end()
 
 " Colours
