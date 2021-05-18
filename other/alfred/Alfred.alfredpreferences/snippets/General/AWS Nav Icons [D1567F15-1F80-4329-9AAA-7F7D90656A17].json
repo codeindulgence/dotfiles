@@ -1,0 +1,9 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "javascript:var c=document.cookie.replace(\/(?:(?:^|.*;\\s*)noflush_awscnm\\s*\\=\\s*([^;]*).*$)|^.*$\/, \"$1\"); if (!c) { alert(\"Can't find cookie. Wrong domain?\"); } else { var awscnm=JSON.parse(decodeURIComponent(c)); awscnm.sc = \"s3,vpc,ec2,lam,emr,r53,dp,rds,ddb,rs,ses,sns,sqs,iam,cfo\".split(\",\"); document.cookie = `noflush_awscnm=${encodeURIComponent(JSON.stringify(awscnm))};domain=.console.aws.amazon.com;path=\/`; alert(`Restored: ${awscnm.sc}`);} void(0);",
+    "dontautoexpand" : true,
+    "uid" : "D1567F15-1F80-4329-9AAA-7F7D90656A17",
+    "name" : "AWS Nav Icons",
+    "keyword" : ""
+  }
+}
