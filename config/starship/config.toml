@@ -1,0 +1,95 @@
+add_newline = false
+
+[aws]
+symbol = "  "
+disabled = true
+
+[cmd_duration]
+show_milliseconds = true
+show_notifications = true
+min_time_to_notify = 30_000
+format = " [$duration](fg:12 dimmed bold) "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[directory]
+read_only = " "
+style = "cyan"
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[git_branch]
+symbol = " "
+format = " [$symbol$branch](purple) "
+
+[git_status]
+style = "6"
+
+[golang]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[nim]
+symbol = " "
+
+[nodejs]
+format = " [$symbol($version )](green)"
+
+[nix_shell]
+symbol = " "
+
+[package]
+symbol = " "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[python]
+symbol = " "
+format = ' [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )](yellow)'
+
+[ruby]
+symbol = " "
+format = " [$symbol($version )](red)"
+
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "
+
+[shlvl]
+disabled = false
+threshold = 3
+
+[swift]
+symbol = "ﯣ "
+
+[time]
+disabled = false
+format = "[$time](fg:8) "
