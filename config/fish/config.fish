@@ -1,8 +1,7 @@
 if status --is-interactive
   if not set -q TMUX
     if not set -q SSH_CLIENT
-      set -l session_name (string replace -a '.' '-' $TERM_PROGRAM)
-      tmux -f ~/.config/tmux/tmux.conf new-session -A -s "$session_name"
+      tmux -f ~/.config/tmux/tmux.conf new-session -A -s main
     else
       set -g pure_right_prompt (echo_wrapped REMOTE red)
     end
