@@ -72,3 +72,4 @@ abbr s git status -bsu
 abbr t tig --all
 abbr tailf tail -f
 abbr v nvim
+abbr vlang v
