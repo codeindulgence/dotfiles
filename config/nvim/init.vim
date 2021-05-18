@@ -279,6 +279,10 @@ let g:tslime_always_current_window = 1
 nmap <S-Return> V<Plug>SendSelectionToTmux j
 vmap <S-Return> <Plug>SendSelectionToTmux
 
+" Snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
 call plug#end()
 
 " Colours
