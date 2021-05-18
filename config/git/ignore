@@ -25,6 +25,11 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# Scala metals bloop files
+.bloop
+metals.sbt
+.scalafmt.conf
+
 *.bak
 *.sw[pon]
 .*.env
@@ -52,8 +57,4 @@ tmp
 xcshareddata
 xcuserdata
 zeus.json
-
-# Scala metals bloop files
-.bloop
-metals.sbt
-.scalafmt.conf
+.solargraph.yml
