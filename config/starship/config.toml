@@ -34,7 +34,17 @@ symbol = " "
 format = " [$symbol$branch](purple) "
 
 [git_status]
-style = "6"
+style = "red"
+conflicted = " "
+ahead = " "
+behind = " "
+diverged = " "
+untracked = " "
+stashed = " "
+modified = " "
+staged = " "
+renamed = " "
+deleted = " "
 
 [golang]
 symbol = " "
