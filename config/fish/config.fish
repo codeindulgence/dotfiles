@@ -3,7 +3,7 @@ if status --is-interactive
     if not set -q SSH_CLIENT
       tmux -f ~/.config/tmux/tmux.conf new-session -A -s main
     else
-      set -g pure_right_prompt (echo_wrapped REMOTE red)
+      set -g pure_right_prompt (echobox REMOTE red)
     end
   end
 
