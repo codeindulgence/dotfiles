@@ -48,6 +48,7 @@ set softtabstop=2
 set splitbelow
 set splitright
 set tabstop=2
+set termguicolors
 set ttimeout
 set ttimeoutlen=100
 set undofile
@@ -178,8 +179,8 @@ nnoremap <C-G> :Tig<CR>
 " Fish
 Plug 'dag/vim-fish', { 'for': 'fish' }
 
-" Base16 Colours
-Plug 'chriskempson/base16-vim'
+" Colours
+Plug 'arcticicestudio/nord-vim'
 
 " Terraform
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
@@ -311,13 +312,12 @@ Plug 'tpope/vim-rails'
 " DB
 Plug 'tpope/vim-dadbod'
 
+" Colorizer
+Plug 'chrisbra/colorizer'
 call plug#end()
 
 " Colours
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
+colorscheme nord
 highlight Search ctermbg=19 ctermfg=NONE
 highlight SpellRare cterm=NONE ctermfg=NONE ctermbg=NONE
 highlight SpellBad ctermfg=18
