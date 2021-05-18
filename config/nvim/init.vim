@@ -296,9 +296,12 @@ if filereadable(expand("~/.vimrc_background"))
   source ~/.vimrc_background
 endif
 highlight Search ctermbg=19 ctermfg=NONE
+highlight SpellRare cterm=NONE ctermfg=NONE ctermbg=NONE
+highlight SpellBad ctermfg=18
 
 " Options set on buffer load
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
+autocmd FileType markdown setlocal spell
 
 " Restore window view on buffer change
 autocmd BufLeave * let b:winview = winsaveview()
