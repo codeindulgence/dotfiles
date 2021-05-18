@@ -61,7 +61,7 @@ let mapleader = ' '
 nnoremap <silent> <Leader>/ :noh<CR>
 nnoremap <Leader>p "+p
 nnoremap <Leader>P "+P
-nnoremap <Leader>v $v^
+nnoremap <Leader>v $v^o
 nnoremap <C-C> <CR>
 nnoremap <Tab> 
 nnoremap <C-N> :bnext<CR>
@@ -101,11 +101,12 @@ inoremap <C-C> <Esc>
 inoremap <C-D> <Del>
 inoremap <C-E> <End>
 inoremap <C-A> <Home>
+
 " Disable SQL completion leader
 let g:ftplugin_sql_omni_key = '<C-V>'
 
 " Visual Mappings
-xnoremap <CR> "+y
+xnoremap <silent> <CR> "+y:Copy<CR>
 xnoremap <Leader>y "+y
 xnoremap <Leader>p "+p
 xnoremap v <C-V>
@@ -135,6 +136,11 @@ command! -bar Reload :source ~/.config/nvim/init.vim
 command! Install :Reload | :PlugInstall
 command! TabFix %s:	:  :
 command! GetHi :echo synIDattr(synIDtrans(synID(line("."),col("."),1)),"name")
+command! Copy call Copy()
+
+function! Copy()
+  call setreg('+', trim(getreg('+')))
+endfunction
 
 " Plugins
 let g:plug_window = 'enew'
