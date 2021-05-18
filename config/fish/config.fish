@@ -9,6 +9,9 @@ if status --is-interactive
     set -g pure_right_prompt (echo_wrapped $tmux_session_name blue)
   end
 
+  # Set tab width
+  tabs -2
+
   # Set colourscheme
   if [ -r ~/.base16_theme ]
     eval sh '"'(realpath ~/.base16_theme)'"'
