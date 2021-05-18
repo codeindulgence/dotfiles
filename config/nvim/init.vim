@@ -4,8 +4,7 @@ filetype plugin indent on
 " General Options
 set autowrite
 set backspace=indent,eol,start
-set nobackup
-set nowritebackup
+set breakindent
 set cindent
 set cinkeys-=0#
 set cmdheight=2
@@ -20,14 +19,18 @@ set gdefault
 set grepprg=ag\ --nogroup\ --nocolor
 set hidden
 set ignorecase
+set inccommand=nosplit
 set indentkeys-=0#
 set lazyredraw
+set linebreak
 set list
 set listchars=tab:▸\ ,extends:…,precedes:…,trail:∙,nbsp:∙
 set mouse=a
+set nobackup
 set nojoinspaces
 set nostartofline
 set noswapfile
+set nowritebackup
 set nrformats=bin,hex,alpha
 set number
 set relativenumber
@@ -38,6 +41,7 @@ set secure
 set shell=sh
 set shiftwidth=2
 set shortmess+=c
+set showbreak=‣
 set smartcase
 set smarttab
 set softtabstop=2
@@ -46,8 +50,8 @@ set splitright
 set tabstop=2
 set ttimeout
 set ttimeoutlen=100
-set updatetime=300
 set undofile
+set updatetime=300
 set wildignorecase
 set wildmode=list:full
 
@@ -76,16 +80,19 @@ nnoremap <Leader>[ a -     <Esc>hhhR[ ]<Esc>A
 nnoremap <Leader>] o<Backspace> -     <Esc>hhhR[ ]<Esc>A
 nnoremap <Leader>x 0f[lrx:w<CR>
 nnoremap <Leader>X 0f[lr<Space>:w<CR>
-nnoremap <Leader>- a - 
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
 nnoremap <Leader>a gg"+yG'.
 nnoremap <Leader>s :GetHi<CR>
 nnoremap <Leader>q gqip
 nnoremap <Leader>g :Git 
-nnoremap <Leader>_ yyp$v^r-
+nnoremap <Leader>- yyp$v^r-
 nnoremap <Leader>= yyp$v^r=
 nnoremap <Leader>d :%g::d<Left><Left>
+nnoremap <Return> o<Esc>
+nnoremap [s [S
+nnoremap ]s ]S
+nnoremap <Leader>l :set wrap!<CR>
 
 " Insert Mappings
 inoremap <C-F> <Right>
@@ -121,6 +128,7 @@ cnoremap <C-P>  <Up>
 " Command aliases
 cnoreabbrev Q q
 cnoreabbrev WQ wq
+cnoreabbrev x bw
 
 " Commands
 command! -bar Reload :source ~/.config/nvim/init.vim
