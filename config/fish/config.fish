@@ -5,8 +5,6 @@ if status --is-interactive
     else
       set -g pure_right_prompt (echo_wrapped REMOTE red)
     end
-  else
-    set -g pure_right_prompt (echo_wrapped $tmux_session_name blue)
   end
 
   # Set tab width
