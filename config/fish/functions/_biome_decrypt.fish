@@ -1,1 +1,0 @@
-/Users/nick/code/projects/biome-fish/_biome_decrypt.fish
