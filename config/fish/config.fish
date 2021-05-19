@@ -18,7 +18,6 @@ if status --is-interactive
 
   # Biome
   set -g _biome_mask_char ''
-  set -g _biome_password supercoolawesomesecretpassword
 
   # Set tab width
   tabs -2
