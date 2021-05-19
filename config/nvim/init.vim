@@ -42,6 +42,7 @@ set shell=sh
 set shiftwidth=2
 set shortmess+=c
 set showbreak=‣
+set signcolumn=yes
 set smartcase
 set smarttab
 set softtabstop=2
@@ -186,9 +187,8 @@ let g:nord_uniform_diff_background = 1
 " Terraform
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 
-" GitGutter
-Plug 'airblade/vim-gitgutter'
-set signcolumn=yes
+" " GitGutter
+" Plug 'airblade/vim-gitgutter'
 
 " Commentary
 Plug 'tpope/vim-commentary'
