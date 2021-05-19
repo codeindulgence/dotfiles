@@ -181,6 +181,7 @@ Plug 'dag/vim-fish', { 'for': 'fish' }
 
 " Colours
 Plug 'arcticicestudio/nord-vim'
+let g:nord_uniform_diff_background = 1
 
 " Terraform
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
@@ -225,6 +226,8 @@ Plug 'tpope/vim-abolish'
 " fzf
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+" Configure fd as fzf search
+" set -Ux FZF_DEFAULT_COMMAND 'fd --no-ignore-vcs -t f'
 nnoremap <C-f> :Files<CR>
 nnoremap <C-b> :Buffers<CR>
 nnoremap <C-h> :History<CR>
@@ -232,10 +235,6 @@ nnoremap <C-s> :Rg
 nnoremap <Leader>; :History:<CR>
 nnoremap q/ :History/<CR>
 imap <c-x><c-f> <plug>(fzf-complete-path)
-
-" Configure fd as fzf search
-" set -Ux FZF_DEFAULT_COMMAND 'fd --no-ignore-vcs -t f'
-
 let g:fzf_layout = { 'window': { 'width': 1, 'height': 1} }
 let g:fzf_preview_window = ['up:65%', 'ctrl-/']
 
@@ -295,9 +294,14 @@ call plug#end()
 
 " Colours
 colorscheme nord
-highlight Search ctermbg=19 ctermfg=NONE
-highlight SpellRare cterm=NONE ctermfg=NONE ctermbg=NONE
-highlight SpellBad ctermfg=18
+highlight ErrorMsg guibg=NONE guifg=#BF616A
+highlight SpellBad guifg=NONE
+highlight Search guibg=#434C5E guifg=NONE
+highlight IncSearch guibg=#434C5E guifg=NONE gui=bold
+highlight DiffAdd guibg=NONE
+highlight DiffChange guibg=NONE
+highlight DiffDelete guibg=NONE
+highlight DiffText guibg=NONE
 
 " Options set on buffer load
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
