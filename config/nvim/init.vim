@@ -209,11 +209,6 @@ Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 let g:AutoPairsShortcutFastWrap = '<C-]>'
 
-" " Neomake
-" Plug 'neomake/neomake'
-" autocmd! BufWritePost * Neomake
-" let g:neomake_open_list = 2
-
 " Rust Filetype
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 
@@ -221,29 +216,11 @@ Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'chrisbra/csv.vim'
 let b:csv_arrange_align = 'l*'
 
-" Find And Replace
-Plug 'brooth/far.vim'
-let g:far#source = 'agnvim'
-let g:far#window_layout = 'bottom'
-let g:far#window_height = 30
-let g:far#file_mask_favorites = ['.', '%']
-let g:far#result_preview = 0
-let g:far#auto_preview = 0
-nnoremap <Leader>f :F  .<Left><Left>
-
-" Indent lines
-Plug 'Yggdroot/indentLine'
-let g:indentLine_enabled = 0
-nnoremap <Leader>\| :IndentLinesToggle<CR>
-
 " bats.vim
 Plug 'aliou/bats.vim'
 
 " Abolish
 Plug 'tpope/vim-abolish'
-
-" vim-ps1
-Plug 'PProvost/vim-ps1'
 
 " fzf
 Plug '/usr/local/opt/fzf'
