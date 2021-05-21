@@ -7,7 +7,6 @@ abbr ....... cd ../../../../..
 abbr a tmux a
 abbr be bundle exec
 abbr ch git check
-abbr d dirhist
 abbr edit vim
 abbr g git
 abbr gdi git diff
@@ -16,7 +15,6 @@ abbr mk mkdir -p
 abbr prb git prb
 abbr pw pwgen -Bys 24 1
 abbr r ranger
-abbr rm trash
 abbr rmd rm -rf
 abbr s git status -bsu
 abbr t tig --all
