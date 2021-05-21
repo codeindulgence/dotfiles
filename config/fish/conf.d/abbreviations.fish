@@ -13,6 +13,8 @@ abbr gdi git diff
 abbr gl git log --oneline --decorate --color --graph
 abbr mk mkdir -p
 abbr prb git prb
+abbr push git push
+abbr pull git pull
 abbr pw pwgen -Bys 24 1
 abbr r ranger
 abbr rmd rm -rf
