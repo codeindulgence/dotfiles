@@ -290,6 +290,13 @@ Plug 'tpope/vim-dadbod'
 
 " Colorizer
 Plug 'chrisbra/colorizer'
+
+" Airline
+Plug 'vim-airline/vim-airline'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
 call plug#end()
 
 " Colours
