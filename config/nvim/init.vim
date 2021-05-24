@@ -235,7 +235,7 @@ nnoremap <silent><C-s> :Telescope live_grep theme=get_dropdown<CR>
 nnoremap <silent><C-q> :Telescope search_history theme=get_dropdown<CR>
 nnoremap <silent><F9> :Telescope command_history theme=get_dropdown<CR>
 nnoremap <silent>z= :Telescope spell_suggest theme=get_dropdown<CR>
-command! Help :Telescope command_history theme=get_dropdown
+command! Help :Telescope help_tags theme=get_dropdown
 cnoreabbrev hh Help
 
 " CoC
