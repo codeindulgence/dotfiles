@@ -178,7 +178,7 @@ let g:ranger_open_mode = 'edit'
 
 " Tig
 Plug 'codeindulgence/vim-tig'
-nnoremap <C-G> :Tig<CR>
+nnoremap <silent><C-G> :Tig<CR>
 
 " Fish
 Plug 'dag/vim-fish', { 'for': 'fish' }
