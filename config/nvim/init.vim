@@ -297,6 +297,20 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
+" Startify
+Plug 'mhinz/vim-startify'
+let g:startify_custom_header = ''
+let g:startify_change_to_vcs_root = 1
+let g:startify_bookmarks = [
+  \ '~/.config/nvim/init.vim',
+  \ '~/.config/fish/config.fish',
+  \ ]
+let g:startify_lists = [
+  \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
+  \ { 'type': 'files',     'header': ['   MRU']            },
+  \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+  \ ]
+
 call plug#end()
 
 " Colours
