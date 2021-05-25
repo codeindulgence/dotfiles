@@ -148,6 +148,9 @@ endfunction
 let g:plug_window = 'enew'
 call plug#begin('~/.config/nvim/plugged')
 
+" Repeat
+Plug 'tpope/vim-repeat'
+
 " Fugitive
 Plug 'tpope/vim-fugitive'
 
@@ -316,6 +319,9 @@ let g:startify_lists = [
   \ { 'type': 'files',     'header': ['   MRU']            },
   \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
   \ ]
+
+" Dates
+Plug 'tpope/vim-speeddating'
 
 call plug#end()
 
