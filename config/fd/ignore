@@ -52,6 +52,13 @@ Alfred.alfredpreferences
 *.gif
 *.pdf
 
+# Ignore home dir folders
+/Applications
+/Library
+/Music
+/Pictures
+/go
+
 # Scala metals bloop files
 .bloop
 metals.sbt
