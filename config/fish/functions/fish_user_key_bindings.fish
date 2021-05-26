@@ -12,4 +12,6 @@ end
 bind \ct 'tmuxpasskey do fzf-file-widget'
 bind \cr 'tmuxpasskey do fzf-history-widget'
 bind \ec 'tmuxpasskey do fzf-cd-widget'
-bind \ci 'test (commandline) = ""; and tmuxpasskey do fzf-cd-widget; or commandline -f complete'
+bind \t 'test (commandline) = ""; \
+  and tmuxpasskey do fzf-cd-widget; \
+  or commandline -f complete'
