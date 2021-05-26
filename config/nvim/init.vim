@@ -226,20 +226,20 @@ Plug 'aliou/bats.vim'
 " Abolish
 Plug 'tpope/vim-abolish'
 
-" Telescope
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'kyazdani42/nvim-web-devicons'
-nnoremap <silent><C-b> :Telescope buffers theme=get_dropdown<CR>
-nnoremap <silent><C-f> :Telescope find_files theme=get_dropdown<CR>
-nnoremap <silent><C-h> :Telescope oldfiles theme=get_dropdown<CR>
-nnoremap <silent><C-s> :Telescope live_grep theme=get_dropdown<CR>
-nnoremap <silent><C-q> :Telescope search_history theme=get_dropdown<CR>
-nnoremap <silent><F9> :Telescope command_history theme=get_dropdown<CR>
-nnoremap <silent>z= :Telescope spell_suggest theme=get_dropdown<CR>
-command! Help :Telescope help_tags theme=get_dropdown
-cnoreabbrev hh Help
+" fzf
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+" Configure fd as fzf search
+" set -Ux FZF_DEFAULT_COMMAND 'fd --no-ignore-vcs -t f'
+nnoremap <C-f> :Files<CR>
+nnoremap <C-b> :Buffers<CR>
+nnoremap <C-h> :History<CR>
+nnoremap <C-s> :Rg
+nnoremap <Leader>; :History:<CR>
+nnoremap q/ :History/<CR>
+imap <c-x><c-f> <plug>(fzf-complete-path)
+let g:fzf_layout = { 'window': { 'width': 1, 'height': 1} }
+let g:fzf_preview_window = ['up:65%', 'ctrl-/']
 
 " CoC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
