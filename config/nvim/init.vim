@@ -178,6 +178,7 @@ let g:ranger_open_mode = 'edit'
 
 " Tig
 Plug 'codeindulgence/vim-tig'
+let g:tig_executable = 'fish -c "tmuxpasskey dont tig"'
 nnoremap <silent><C-G> :Tig<CR>
 
 " Fish
