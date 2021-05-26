@@ -12,8 +12,8 @@ if status --is-interactive
 
   # FZF Options
   set -x FZF_DEFAULT_COMMAND 'fd --no-ignore-vcs -t f'
-  set -x FZF_ALT_C_COMMAND 'fd --no-ignore -t d'
-  set -x FZF_CTRL_T_COMMAND 'fd --no-ignore -t d -t f'
+  set -x FZF_ALT_C_COMMAND 'fd --no-ignore -t d . $dir'
+  set -x FZF_CTRL_T_COMMAND 'fd --no-ignore -t d -t f . $dir'
   set -x FZF_DEFAULT_OPTS '--prompt "❯ " '\
     '--pointer "❯ " '\
     '--bind "ctrl-d:preview-page-down,ctrl-u:preview-page-up" '\
