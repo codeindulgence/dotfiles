@@ -178,8 +178,11 @@ let g:ranger_open_mode = 'edit'
 
 " Tig
 Plug 'codeindulgence/vim-tig'
-let g:tig_executable = 'fish -c "tmuxpasskey dont tig"'
+let g:tig_executable = 'fish -c "tmuxpasskey dont tig status"'
+let g:tig_default_command = ''
 nnoremap <silent><C-G> :Tig<CR>
+autocmd TermEnter * set showtabline=0
+autocmd TermLeave * set showtabline=2
 
 " Fish
 Plug 'dag/vim-fish', { 'for': 'fish' }
