@@ -233,14 +233,13 @@ Plug 'tpope/vim-abolish'
 " fzf
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
-" Configure fd as fzf search
-" set -Ux FZF_DEFAULT_COMMAND 'fd --no-ignore-vcs -t f'
-nnoremap <C-f> :Files<CR>
-nnoremap <C-b> :Buffers<CR>
-nnoremap <C-h> :History<CR>
-nnoremap <C-s> :Rg
-nnoremap <Leader>; :History:<CR>
-nnoremap q/ :History/<CR>
+nnoremap <silent><C-f> :Files<CR>
+nnoremap <silent><C-b> :Buffers<CR>
+nnoremap <silent><C-h> :History<CR>
+nnoremap <silent><C-s> :Rg 
+nnoremap <silent><C-q> :History/<CR>
+nnoremap <silent><F9>  :History:<CR>
+nnoremap <silent><BS>  :Helptags<CR>
 imap <c-x><c-f> <plug>(fzf-complete-path)
 let g:fzf_layout = { 'window': { 'width': 1, 'height': 0.5, 'yoffset': 1} }
 let g:fzf_history_dir = '~/.local/share/fzf-history'
