@@ -8,3 +8,8 @@ end
 if type -q fzf_key_bindings
   fzf_key_bindings
 end
+
+bind \ct 'tmuxpasskey do fzf-file-widget'
+bind \cr 'tmuxpasskey do fzf-history-widget'
+bind \ec 'tmuxpasskey do fzf-cd-widget'
+bind \ci 'test (commandline) = ""; and tmuxpasskey do fzf-cd-widget; or commandline -f complete'

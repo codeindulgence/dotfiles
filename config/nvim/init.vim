@@ -95,6 +95,7 @@ nnoremap <Return> o<Esc>
 nnoremap [s [S
 nnoremap ]s ]S
 nnoremap <Leader>l :set wrap!<CR>
+nnoremap <M-w> :bw<CR>
 
 " Insert Mappings
 inoremap <C-F> <Right>
@@ -157,7 +158,6 @@ Plug 'tpope/vim-fugitive'
 " Tmux Navigator
 Plug 'christoomey/vim-tmux-navigator'
 let g:tmux_navigator_no_mappings = 1
-nnoremap <silent> <C-H> :TmuxNavigateLeft<cr>
 nnoremap <silent> <C-J> :TmuxNavigateDown<cr>
 nnoremap <silent> <C-K> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-L> :TmuxNavigateRight<cr>
@@ -238,8 +238,10 @@ nnoremap <C-s> :Rg
 nnoremap <Leader>; :History:<CR>
 nnoremap q/ :History/<CR>
 imap <c-x><c-f> <plug>(fzf-complete-path)
-let g:fzf_layout = { 'window': { 'width': 1, 'height': 1} }
-let g:fzf_preview_window = ['up:65%', 'ctrl-/']
+let g:fzf_layout = { 'window': { 'width': 1, 'height': 0.5, 'yoffset': 1} }
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+autocmd  FileType fzf set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
 " CoC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
