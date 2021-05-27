@@ -235,10 +235,9 @@ nnoremap <silent><C-q> :History/<CR>
 nnoremap <silent><F9>  :History:<CR>
 nnoremap <silent><BS>  :Helptags<CR>
 imap <c-x><c-f> <plug>(fzf-complete-path)
-let g:fzf_layout = { 'window': { 'width': 1, 'height': 0.5, 'yoffset': 1} }
+let g:fzf_layout = { 'window': { 'width': 1, 'height': 0.5} }
 let g:fzf_history_dir = '~/.local/share/fzf-history'
-autocmd  FileType fzf set laststatus=0 noshowmode noruler
-  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+autocmd FileType fzf set winblend=20
 
 " CoC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
