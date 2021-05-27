@@ -165,7 +165,7 @@ command! -nargs=? Password execute ':read !pwgen -s' <args>
 Plug 'jamessan/vim-gnupg'
 
 " Ranger
-Plug 'Mizuchi/vim-ranger'
+Plug 'codeindulgence/vim-ranger'
 let g:ranger_on_exit = 'bw!'
 let g:ranger_open_mode = 'edit'
 
@@ -174,8 +174,6 @@ Plug 'codeindulgence/vim-tig'
 let g:tig_executable = 'fish -c "tmuxpasskey dont tig status"'
 let g:tig_default_command = ''
 nnoremap <silent><C-G> :Tig<CR>
-autocmd TermEnter * set showtabline=0
-autocmd TermLeave * set showtabline=2
 
 " Fish
 Plug 'dag/vim-fish', { 'for': 'fish' }
@@ -336,6 +334,14 @@ highlight DiffAdd guibg=NONE
 highlight DiffChange guibg=NONE
 highlight DiffDelete guibg=NONE
 highlight DiffText guibg=NONE
+
+" Hide UI elements for terminal apps
+autocmd FileType vim-plug,ranger,tig set 
+  \ showtabline=0 laststatus=0 nonumber norelativenumber signcolumn=no
+  \| autocmd BufLeave <buffer> set
+  \ showtabline=2 laststatus=2 number relativenumber signcolumn=yes
+autocmd FileType gitcommit set nonumber norelativenumber
+  \| let g:airline#extensions#tabline#enabled = 0
 
 " Options set on buffer load
 autocmd FileType markdown setlocal spell
