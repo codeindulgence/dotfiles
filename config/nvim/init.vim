@@ -21,6 +21,7 @@ set hidden
 set ignorecase
 set inccommand=nosplit
 set indentkeys-=0#
+set iskeyword+=-
 set lazyredraw
 set linebreak
 set list
