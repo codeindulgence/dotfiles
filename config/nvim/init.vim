@@ -3,45 +3,38 @@ filetype plugin indent on
 
 " General Options
 set autowrite
-set backspace=indent,eol,start
 set breakindent
-set cindent
-set cinkeys-=0#
-set cmdheight=2
+set cedit=<C-O>
 set colorcolumn=80
-set completeopt=menu,longest,preview
-set confirm
 set expandtab
 set exrc
+set foldcolumn=auto
 set fileformat=unix
-set formatoptions-=cro
+set formatoptions+=ron1
 set gdefault
-set grepprg=ag\ --nogroup\ --nocolor
 set hidden
 set ignorecase
 set inccommand=nosplit
 set indentkeys-=0#
 set iskeyword+=-
-set lazyredraw
 set linebreak
 set list
 set listchars=tab:▸\ ,extends:…,precedes:…,trail:∙,nbsp:∙
 set mouse=a
 set nobackup
 set nojoinspaces
-set nostartofline
+set noruler
+set noshowmode
 set noswapfile
 set nowritebackup
-set nrformats=bin,hex,alpha
 set number
+set pumblend=20
 set relativenumber
 set report=0
-set ruler
-set scrolloff=2
+set scrolljump=10
+set scrolloff=1
 set secure
-set shell=sh
 set shiftwidth=2
-set shortmess+=c
 set showbreak=‣
 set signcolumn=yes
 set smartcase
@@ -56,47 +49,44 @@ set ttimeoutlen=100
 set undofile
 set updatetime=300
 set wildignorecase
-set wildmode=list:full
+set wildmode=full
 
 let mapleader = ' '
 
 " Normal mode Mappings
-nnoremap <silent> <Leader>/ :noh<CR>
-nnoremap <Leader>p "+p
-nnoremap <Leader>P "+P
-nnoremap <Leader>v $v^o
-nnoremap <C-C> <CR>
-nnoremap <Tab> 
-nnoremap <C-N> :bnext<CR>
-nnoremap <C-P> :bNext<CR>
-nnoremap ' `
-nnoremap <Leader>r :redraw!<CR>
-nnoremap v <C-V>
-nnoremap <C-V> v
-nnoremap S :%s::<Left>
-nnoremap <Leader>w :%s/\s\+$//e<CR>
-nnoremap ; :
-nnoremap : ;
-nnoremap <Leader><C-O> :e .<CR>
 nnoremap ! :!
-nnoremap <Leader>[ a -     <Esc>hhhR[ ]<Esc>A
-nnoremap <Leader>] o<Backspace> -     <Esc>hhhR[ ]<Esc>A
-nnoremap <Leader>x 0f[lrx:w<CR>
-nnoremap <Leader>X 0f[lr<Space>:w<CR>
-nnoremap <Leader>o o<Esc>
-nnoremap <Leader>O O<Esc>
-nnoremap <Leader>a gg"+yG'.
-nnoremap <Leader>s :GetHi<CR>
-nnoremap <Leader>q gqip
-nnoremap <Leader>g :Git 
-nnoremap <Leader>- yyp$v^r-
-nnoremap <Leader>= yyp$v^r=
-nnoremap <Leader>d :%g::d<Left><Left>
-nnoremap <Return> o<Esc>
+nnoremap ' `
+nnoremap : ;
+nnoremap ; :
+nnoremap <C-C> <CR>
+nnoremap <C-V> v
+nnoremap <M-w> :bw<CR>
+nnoremap <Tab> 
+nnoremap S :%s::<Left>
 nnoremap [s [S
 nnoremap ]s ]S
+nnoremap v <C-V>
+
+nnoremap <silent><C-N> :bnext<CR>
+nnoremap <silent><C-P> :bNext<CR>
+nnoremap <silent><Leader>/ :noh<CR>
+nnoremap <silent><Return> <C-O> :e .<CR>
+
+nnoremap <Leader>- yyp$v^r-
+nnoremap <Leader>= yyp$v^r=
+nnoremap <Leader>O O<Esc>
+nnoremap <Leader>P "+P
+nnoremap <Leader>a gg"+yG'.
+nnoremap <Leader>d :%g::d<Left><Left>
+nnoremap <Leader>g :Git 
 nnoremap <Leader>l :set wrap!<CR>
-nnoremap <M-w> :bw<CR>
+nnoremap <Leader>o o<Esc>
+nnoremap <Leader>p "+p
+nnoremap <Leader>q gqip
+nnoremap <Leader>r :redraw!<CR>
+nnoremap <Leader>s :GetHi<CR>
+nnoremap <Leader>v $v^o
+nnoremap <Leader>w :%s/\s\+$//e<CR>
 
 " Insert Mappings
 inoremap <C-F> <Right>
@@ -110,16 +100,17 @@ inoremap <C-A> <Home>
 let g:ftplugin_sql_omni_key = '<C-V>'
 
 " Visual Mappings
-xnoremap <silent> <CR> "+y:Copy<CR>
-xnoremap <Leader>y "+y
-xnoremap <Leader>p "+p
 xnoremap v <C-V>
 xnoremap <C-V> v
 xnoremap ; :
 xnoremap : ;
 xnoremap < <gv
 xnoremap > >gv
-xnoremap <C-B> '>a**'<i**'>
+
+xnoremap <silent><CR> "+y:Copy<CR>
+
+xnoremap <Leader>y "+y
+xnoremap <Leader>p "+p
 
 " Command Mappings
 cnoremap <C-A>  <Home>
@@ -137,10 +128,11 @@ cnoreabbrev x bw
 
 " Commands
 command! -bar Reload :source ~/.config/nvim/init.vim
+command! -nargs=? Password execute ':read !pwgen -s' <args>
+command! Copy call Copy()
+command! GetHi :echo synIDattr(synIDtrans(synID(line("."),col("."),1)),"name")
 command! Install :Reload | :PlugInstall
 command! TabFix %s:	:  :
-command! GetHi :echo synIDattr(synIDtrans(synID(line("."),col("."),1)),"name")
-command! Copy call Copy()
 
 function! Copy()
   call setreg('+', trim(getreg('+')))
@@ -159,12 +151,12 @@ Plug 'tpope/vim-fugitive'
 " Tmux Navigator
 Plug 'christoomey/vim-tmux-navigator'
 let g:tmux_navigator_no_mappings = 1
-nnoremap <silent> <C-J> :TmuxNavigateDown<cr>
-nnoremap <silent> <C-K> :TmuxNavigateUp<cr>
-nnoremap <silent> <C-L> :TmuxNavigateRight<cr>
-inoremap <silent> <C-J> <Esc>:TmuxNavigateDown<cr>
-inoremap <silent> <C-K> <Esc>:TmuxNavigateUp<cr>
-inoremap <silent> <C-L> <Esc>:TmuxNavigateRight<cr>
+nnoremap <silent><C-J> :TmuxNavigateDown<cr>
+nnoremap <silent><C-K> :TmuxNavigateUp<cr>
+nnoremap <silent><C-L> :TmuxNavigateRight<cr>
+inoremap <silent><C-J> <Esc>:TmuxNavigateDown<cr>
+inoremap <silent><C-K> <Esc>:TmuxNavigateUp<cr>
+inoremap <silent><C-L> <Esc>:TmuxNavigateRight<cr>
 
 " Password generator
 command! -nargs=? Password execute ':read !pwgen -s' <args>
@@ -266,7 +258,7 @@ endfunction
 
 inoremap <silent><expr> <s-enter> coc#refresh()
 " Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent>K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -346,7 +338,6 @@ highlight DiffDelete guibg=NONE
 highlight DiffText guibg=NONE
 
 " Options set on buffer load
-autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 autocmd FileType markdown setlocal spell
 
 " Restore window view on buffer change
