@@ -13,7 +13,9 @@ if status --is-interactive
   if set -q TMUX
     set -l window_name (tmux display -p '#{window_name}')
     if [ "$window_name" != "Home" ]
-      z $window_name >/dev/null
+      type -q $window_name
+      and $window_name
+      or z $window_name >/dev/null
     end
   end
 
