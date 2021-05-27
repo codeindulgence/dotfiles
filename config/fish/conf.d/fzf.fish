@@ -1,11 +1,14 @@
 set -x FZF_DEFAULT_COMMAND 'fd --no-ignore-vcs -t f'
 set -x FZF_ALT_C_COMMAND 'fd --no-ignore -t d . $dir'
 set -x FZF_CTRL_T_COMMAND 'fd --no-ignore -t d -t f . $dir'
+set -x FZF_CTRL_T_OPTS '--bind "btab:toggle+up,tab:toggle+down"'
+set -x FZF_ALT_C_OPTS '--bind "btab:toggle+up,tab:toggle+down"'
 set -x FZF_DEFAULT_OPTS '--prompt "❯ " '\
   '--pointer "❯ " '\
   '--bind "ctrl-d:preview-page-down,ctrl-u:preview-page-up" '\
   '--bind "ctrl-e:preview-down,ctrl-y:preview-up" '\
   '--bind "ctrl-/:toggle-preview" '\
+  '--bind "tab:toggle+up,btab:toggle+down" '\
   '--preview "bat --color always --decorations never {}" '\
   '--preview-window up,50%,border-horizontal,hidden'\
   '--color pointer:5,info:8,spinner:8,header:8'\
