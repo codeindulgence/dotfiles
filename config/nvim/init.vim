@@ -149,7 +149,6 @@ Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 Plug 'honza/vim-snippets'
 Plug 'jamessan/vim-gnupg'
-Plug 'jiangmiao/auto-pairs'
 Plug 'leafgarland/typescript-vim'
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'tpope/vim-abolish'
@@ -161,6 +160,9 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
+
+Plug 'jiangmiao/auto-pairs'
+let g:AutoPairsShortcutFastWrap = '<C-]>'
 
 Plug 'chrisbra/csv.vim'
 let b:csv_arrange_align = 'l*'
