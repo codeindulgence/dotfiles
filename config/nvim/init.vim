@@ -61,7 +61,7 @@ nnoremap ; :
 nnoremap <C-C> <CR>
 nnoremap <C-V> v
 nnoremap <M-w> :bw<CR>
-nnoremap <Tab> 
+nnoremap <Tab> <C-^>
 nnoremap S :%s::<Left>
 nnoremap [s [S
 nnoremap ]s ]S
@@ -70,7 +70,7 @@ nnoremap v <C-V>
 nnoremap <silent><C-N> :bnext<CR>
 nnoremap <silent><C-P> :bNext<CR>
 nnoremap <silent><Leader>/ :noh<CR>
-nnoremap <silent><Return> <C-O> :e .<CR>
+nnoremap <silent><Return> :e .<CR>
 
 nnoremap <Leader>- yyp$v^r-
 nnoremap <Leader>= yyp$v^r=
@@ -180,10 +180,10 @@ endfunction
 
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+nnoremap <C-s> :Rg 
 nnoremap <silent><C-f> :Files<CR>
 nnoremap <silent><C-b> :Buffers<CR>
 nnoremap <silent><C-h> :History<CR>
-nnoremap <silent><C-s> :Rg 
 nnoremap <silent><C-q> :History/<CR>
 nnoremap <silent><F9>  :History:<CR>
 nnoremap <silent><BS>  :Helptags<CR>
@@ -215,9 +215,9 @@ let g:airline_symbols.dirty=''
 
 Plug 'tpope/vim-commentary'
 autocmd FileType terraform setlocal commentstring=#\ %s
-nmap  gcc
-vmap  gcc
-nmap  gcip
+nmap <C-_> gcc
+vmap <C-_> gcc
+nmap <C-\> gcip
 
 Plug 'dag/vim-fish', { 'for': 'fish' }
 autocmd FileType fish set indentexpr=
