@@ -16,9 +16,10 @@ function fzf-recent-widget
   eval "$command | $fzf_cmd | read -l result"
 
   if [ -n "$result" ]
-    cd $result
-    commandline -f repaint
+    commandline "cd $result"
   end
+
+  commandline -f repaint
 end
 
 bind -k backspace \
