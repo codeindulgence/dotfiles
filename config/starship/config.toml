@@ -6,8 +6,6 @@ disabled = true
 
 [cmd_duration]
 show_milliseconds = true
-show_notifications = true
-min_time_to_notify = 30_000
 format = " [$duration](fg:12 dimmed bold) "
 
 [conda]
