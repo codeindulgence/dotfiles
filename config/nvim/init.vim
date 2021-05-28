@@ -142,89 +142,50 @@ endfunction
 let g:plug_window = 'enew'
 call plug#begin('~/.config/nvim/plugged')
 
-" Repeat
-Plug 'tpope/vim-repeat'
-
-" Fugitive
-Plug 'tpope/vim-fugitive'
-
-" Tmux Navigator
-Plug 'christoomey/vim-tmux-navigator'
-let g:tmux_navigator_no_mappings = 1
-nnoremap <silent><C-J> :TmuxNavigateDown<cr>
-nnoremap <silent><C-K> :TmuxNavigateUp<cr>
-nnoremap <silent><C-L> :TmuxNavigateRight<cr>
-inoremap <silent><C-J> <Esc>:TmuxNavigateDown<cr>
-inoremap <silent><C-K> <Esc>:TmuxNavigateUp<cr>
-inoremap <silent><C-L> <Esc>:TmuxNavigateRight<cr>
-
-" Password generator
-command! -nargs=? Password execute ':read !pwgen -s' <args>
-
-" GnuPG
-Plug 'jamessan/vim-gnupg'
-
-" Ranger
-Plug 'codeindulgence/vim-ranger'
-let g:ranger_on_exit = 'bw!'
-let g:ranger_open_mode = 'edit'
-
-" Tig
-Plug 'codeindulgence/vim-tig'
-let g:tig_executable = 'fish -c "tmuxpasskey dont tig status"'
-let g:tig_default_command = ''
-nnoremap <silent><C-G> :Tig<CR>
-
-" Fish
-Plug 'dag/vim-fish', { 'for': 'fish' }
-
-" Colours
-Plug 'arcticicestudio/nord-vim'
-let g:nord_uniform_diff_background = 1
-let g:nord_italic = 1
-let g:nord_italic_comments = 1
-let g:nord_underline = 1
-
-" Terraform
+Plug 'SirVer/ultisnips'
+Plug 'aliou/bats.vim', { 'for': 'bats' }
+Plug 'chrisbra/colorizer'
+Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
-
-" " GitGutter
-" Plug 'airblade/vim-gitgutter'
-
-" Commentary
-Plug 'tpope/vim-commentary'
-autocmd FileType terraform setlocal commentstring=#\ %s
-nmap  gcc
-vmap  gcc
-nmap  gcip
-
-" Typescript
+Plug 'honza/vim-snippets'
+Plug 'jamessan/vim-gnupg'
+Plug 'jiangmiao/auto-pairs'
 Plug 'leafgarland/typescript-vim'
-
-" Eunuch
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-dadbod'
+Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-eunuch'
-
-" Surround
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 
-" Auto-pairs
-Plug 'jiangmiao/auto-pairs'
-let g:AutoPairsShortcutFastWrap = '<C-]>'
-
-" Rust Filetype
-Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-
-" CSV
 Plug 'chrisbra/csv.vim'
 let b:csv_arrange_align = 'l*'
 
-" bats.vim
-Plug 'aliou/bats.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+let g:coc_enable_locationlist = 0
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+inoremap <silent><expr> <s-enter> coc#refresh()
+nnoremap <silent>K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
 
-" Abolish
-Plug 'tpope/vim-abolish'
-
-" fzf
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 nnoremap <silent><C-f> :Files<CR>
@@ -239,60 +200,16 @@ let g:fzf_layout = { 'window': { 'width': 1, 'height': 0.5} }
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 autocmd FileType fzf set winblend=20
 
-" CoC
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_enable_locationlist = 0
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+Plug 'arcticicestudio/nord-vim'
+let g:nord_uniform_diff_background = 1
+let g:nord_italic = 1
+let g:nord_italic_comments = 1
+let g:nord_underline = 1
 
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-inoremap <silent><expr> <s-enter> coc#refresh()
-" Use K to show documentation in preview window
-nnoremap <silent>K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-Plug 'jgdavey/tslime.vim'
-let g:tslime_always_current_session = 1
-let g:tslime_always_current_window = 1
-nmap <S-Return> V<Plug>SendSelectionToTmux j
-vmap <S-Return> <Plug>SendSelectionToTmux
-
-" Snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-
-" Vlang
 Plug 'ollykel/v-vim', { 'for': 'v' }
 let g:v_autofmt_bufwritepre = 1
 autocmd Filetype vlang setlocal listchars+=tab:\ \ 
 
-" Elixir
-Plug 'elixir-editors/vim-elixir'
-
-" Ruby/Rails
-Plug 'tpope/vim-rails'
-
-" DB
-Plug 'tpope/vim-dadbod'
-
-" Colorizer
-Plug 'chrisbra/colorizer'
-
-" Airline
 Plug 'vim-airline/vim-airline'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -304,22 +221,32 @@ if !exists('g:airline_symbols')
 endif
 let g:airline_symbols.dirty=''
 
-" Startify
-Plug 'mhinz/vim-startify'
-let g:startify_custom_header = ''
-let g:startify_change_to_vcs_root = 1
-let g:startify_bookmarks = [
-  \ '~/.config/nvim/init.vim',
-  \ '~/.config/fish/config.fish',
-  \ ]
-let g:startify_lists = [
-  \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
-  \ { 'type': 'files',     'header': ['   MRU']            },
-  \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
-  \ ]
+Plug 'tpope/vim-commentary'
+autocmd FileType terraform setlocal commentstring=#\ %s
+nmap  gcc
+vmap  gcc
+nmap  gcip
 
-" Dates
-Plug 'tpope/vim-speeddating'
+Plug 'dag/vim-fish', { 'for': 'fish' }
+autocmd FileType fish set indentexpr=
+
+Plug 'codeindulgence/vim-ranger'
+let g:ranger_on_exit = 'bw!'
+let g:ranger_open_mode = 'edit'
+
+Plug 'codeindulgence/vim-tig'
+let g:tig_executable = 'fish -c "tmuxpasskey dont tig status"'
+let g:tig_default_command = ''
+nnoremap <silent><C-G> :Tig<CR>
+
+Plug 'christoomey/vim-tmux-navigator'
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent><C-J> :TmuxNavigateDown<cr>
+nnoremap <silent><C-K> :TmuxNavigateUp<cr>
+nnoremap <silent><C-L> :TmuxNavigateRight<cr>
+inoremap <silent><C-J> <Esc>:TmuxNavigateDown<cr>
+inoremap <silent><C-K> <Esc>:TmuxNavigateUp<cr>
+inoremap <silent><C-L> <Esc>:TmuxNavigateRight<cr>
 
 call plug#end()
 
