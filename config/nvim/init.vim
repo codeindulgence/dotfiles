@@ -188,9 +188,9 @@ nnoremap <silent><C-q> :History/<CR>
 nnoremap <silent><F9>  :History:<CR>
 nnoremap <silent><BS>  :Helptags<CR>
 imap <c-x><c-f> <plug>(fzf-complete-path)
-let g:fzf_layout = { 'window': { 'width': 1, 'height': 0.5} }
+let g:fzf_layout = { 'window': { 'width': 0.95, 'height': 0.75} }
 let g:fzf_history_dir = '~/.local/share/fzf-history'
-autocmd FileType fzf set winblend=20
+autocmd FileType fzf set winblend=15
 
 Plug 'arcticicestudio/nord-vim'
 let g:nord_uniform_diff_background = 1
