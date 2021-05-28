@@ -16,7 +16,7 @@ if status --is-interactive
     # Set tab width
     tabs -2
 
-    if [ "$window_name" != "Home" -a "$window_name" != "fish" ]
+    if contains "$window_name" Home New fish
       type -q $window_name
       and $window_name
       or z $window_name >/dev/null
