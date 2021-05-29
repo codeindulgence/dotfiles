@@ -6,18 +6,3 @@ config/fish/fishd.*
 config/tmux/plugins/
 config/nvim/autoload/plug.vim.old
 other/alfred/Alfred.alfredpreferences/snippets/Personal
-
-# Created by https://www.gitignore.io/api/vim
-
-### Vim ###
-# swap
-[._]*.s[a-w][a-z]
-[._]s[a-w][a-z]
-# session
-Session.vim
-# temporary
-.netrwhist
-*~
-# auto-generated tag files
-tags
-
