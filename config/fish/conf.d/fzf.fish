@@ -1,8 +1,9 @@
+set -x FZF_REVERSE_OPTS --reverse --bind "btab:toggle+up,tab:toggle+down"
 set -x FZF_DEFAULT_COMMAND 'fd --no-ignore-vcs -t f'
 set -x FZF_ALT_C_COMMAND 'fd --no-ignore -t d . $dir'
 set -x FZF_CTRL_T_COMMAND 'fd --no-ignore -t d -t f . $dir'
-set -x FZF_CTRL_T_OPTS '--bind "btab:toggle+up,tab:toggle+down"'
-set -x FZF_ALT_C_OPTS '--bind "btab:toggle+up,tab:toggle+down"'
+set -x FZF_CTRL_T_OPTS $FZF_REVERSE_OPTS
+set -x FZF_ALT_C_OPTS  $FZF_REVERSE_OPTS
 set -x FZF_DEFAULT_OPTS '--prompt "❯ " '\
   '--pointer "❯ " '\
   '--bind "ctrl-d:preview-page-down,ctrl-u:preview-page-up" '\

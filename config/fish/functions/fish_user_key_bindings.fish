@@ -10,13 +10,16 @@ if type -q fzf_key_bindings
 end
 
 function fzf-recent-widget
-  set -l command 'z -l | awk "{print \$2}" | grep -v "^$PWD\$"'
   set -l hist_file ~/.local/share/fzf-history/recent
-  set -l fzf_cmd 'fzf --height 40% --reverse --history='$hist_file
-  eval "$command | $fzf_cmd | read -l result"
+
+  begin
+    parents
+    z -l | awk "{print \$2}" | grep -v "^$PWD\$"
+  end | fzf --height 40% $FZF_REVERSE_OPTS --history=$hist_file | read -l result
 
   if [ -n "$result" ]
     commandline "cd $result"
+    commandline -f execute
   end
 
   commandline -f repaint
