@@ -145,14 +145,11 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'SirVer/ultisnips'
 Plug 'aliou/bats.vim', { 'for': 'bats' }
 Plug 'chrisbra/colorizer'
-Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 Plug 'honza/vim-snippets'
 Plug 'jamessan/vim-gnupg'
-Plug 'leafgarland/typescript-vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-dadbod'
 Plug 'tpope/vim-endwise'
@@ -221,9 +218,6 @@ nmap <C-_> gcc
 vmap <C-_> gcc
 nmap <C-\> gcip
 
-Plug 'dag/vim-fish', { 'for': 'fish' }
-autocmd FileType fish set indentexpr=
-
 Plug 'tanvirtin/vgit.nvim'
 nnoremap <silent> [c :VGit hunk_up<CR>
 nnoremap <silent> ]c :VGit hunk_down<CR>
@@ -279,6 +273,10 @@ autocmd FileType vim-plug,ranger,tig set
   \ showtabline=2 laststatus=2 number relativenumber signcolumn=yes
 autocmd FileType gitcommit set nonumber norelativenumber
   \| let g:airline#extensions#tabline#enabled = 0
+
+" Filetypes
+autocmd BufEnter *.fish set filetype=fish
+autocmd BufEnter *.ex set filetype=elixir
 
 " Options set on buffer load
 autocmd FileType markdown setlocal spell
