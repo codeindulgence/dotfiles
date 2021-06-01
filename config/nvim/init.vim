@@ -134,6 +134,7 @@ command! GetHi :echo synIDattr(synIDtrans(synID(line("."),col("."),1)),"name")
 command! Install :Reload | :PlugInstall
 command! TabFix %s:	:  :
 
+" Functions
 function! Copy()
   call setreg('+', trim(getreg('+')))
 endfunction
@@ -255,15 +256,7 @@ highlight DiffDelete guibg=NONE
 highlight DiffText guibg=NONE
 
 lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = 'maintained',
-  indent = { enable = true },
-  highlight = { enable = true }
-}
-require('vgit').setup({
-    blames_enabled = false,
-    hls = { VGitBlame = { fg = '#4c566a' } }
-})
+require('plugins')
 EOF
 
 " Hide UI elements for terminal apps
