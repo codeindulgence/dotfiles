@@ -150,6 +150,8 @@ Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 Plug 'honza/vim-snippets'
 Plug 'jamessan/vim-gnupg'
 Plug 'leafgarland/typescript-vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-dadbod'
@@ -222,6 +224,11 @@ nmap <C-\> gcip
 Plug 'dag/vim-fish', { 'for': 'fish' }
 autocmd FileType fish set indentexpr=
 
+Plug 'tanvirtin/vgit.nvim'
+nnoremap <silent> [c :VGit hunk_up<CR>
+nnoremap <silent> ]c :VGit hunk_down<CR>
+nnoremap <silent> go :VGit hunk_preview<CR>
+
 Plug 'codeindulgence/vim-ranger'
 let g:ranger_on_exit = 'bw!'
 let g:ranger_open_mode = 'edit'
@@ -252,6 +259,18 @@ highlight DiffAdd guibg=NONE
 highlight DiffChange guibg=NONE
 highlight DiffDelete guibg=NONE
 highlight DiffText guibg=NONE
+
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = 'maintained',
+  indent = { enable = true },
+  highlight = { enable = true }
+}
+require('vgit').setup({
+    blames_enabled = false,
+    hls = { VGitBlame = { fg = '#4c566a' } }
+})
+EOF
 
 " Hide UI elements for terminal apps
 autocmd FileType vim-plug,ranger,tig set 
