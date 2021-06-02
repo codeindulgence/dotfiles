@@ -192,6 +192,30 @@ imap <c-x><c-f> <plug>(fzf-complete-path)
 let g:fzf_layout = { 'window': { 'width': 0.95, 'height': 0.75} }
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 autocmd FileType fzf set winblend=15
+function! _fzf_pwd_recent_files()
+  return filter(fzf#vim#_recent_files(), 'v:val[0] !~ "/\\|\\~"')
+endfunction
+function! PwdHistory(...)
+  if a:0 > 0
+    let source = a:1
+  else
+    let source = _fzf_pwd_recent_files()
+  endif
+  return fzf#vim#history({'source': source})
+endfunction
+function! PwdHistoryOrFiles()
+  if expand('%') != ""
+    return
+  endif
+  let hist = _fzf_pwd_recent_files()
+  if len(hist) > 0
+    return PwdHistory(hist)
+  else
+    Files
+  endif
+endfunction
+command! PwdHistory call PwdHistory()
+autocmd VimEnter * call PwdHistoryOrFiles()
 
 Plug 'arcticicestudio/nord-vim'
 let g:nord_uniform_diff_background = 1
