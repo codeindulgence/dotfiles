@@ -102,7 +102,3 @@ threshold = 3
 
 [swift]
 symbol = "ﯣ "
-
-[time]
-disabled = false
-format = "[$time](fg:8) "
