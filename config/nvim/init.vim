@@ -149,6 +149,7 @@ Plug 'chrisbra/colorizer'
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 Plug 'honza/vim-snippets'
 Plug 'jamessan/vim-gnupg'
+Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'tpope/vim-abolish'
@@ -247,6 +248,7 @@ call plug#end()
 " Colours
 colorscheme nord
 highlight ErrorMsg guibg=NONE guifg=#BF616A
+highlight WarningMsg guibg=NONE guifg=#EBCB8B
 highlight SpellBad guifg=NONE
 highlight Search guibg=#434C5E guifg=NONE
 highlight IncSearch guibg=#434C5E guifg=NONE gui=bold
@@ -254,10 +256,6 @@ highlight DiffAdd guibg=NONE
 highlight DiffChange guibg=NONE
 highlight DiffDelete guibg=NONE
 highlight DiffText guibg=NONE
-
-lua <<EOF
-require('plugins')
-EOF
 
 " Hide UI elements for terminal apps
 autocmd FileType vim-plug,ranger,tig set 
@@ -277,3 +275,5 @@ autocmd FileType markdown setlocal spell
 " Restore window view on buffer change
 autocmd BufLeave * let b:winview = winsaveview()
 autocmd BufEnter * if(exists('b:winview')) | call winrestview(b:winview) | endif
+
+lua require('config')
