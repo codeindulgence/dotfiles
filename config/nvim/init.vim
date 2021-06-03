@@ -170,17 +170,6 @@ let g:AutoPairsShortcutFastWrap = '<C-]>'
 Plug 'chrisbra/csv.vim'
 let b:csv_arrange_align = 'l*'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_enable_locationlist = 0
-nnoremap <silent>K :call <SID>show_documentation()<CR>
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 nnoremap <C-s> :Rg 
