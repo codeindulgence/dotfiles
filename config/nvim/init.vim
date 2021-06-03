@@ -232,7 +232,7 @@ let g:airline_symbols.dirty=''
 Plug 'tpope/vim-commentary'
 autocmd FileType terraform setlocal commentstring=#\ %s
 nmap <C-_> gcc
-vmap <C-_> gcc
+vmap <C-_> gc
 nmap <C-\> gcip
 
 Plug 'tanvirtin/vgit.nvim'
