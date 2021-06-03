@@ -35,6 +35,8 @@ local on_attach = function(c, b)
   bnmc(b, 'K',  'Hover')
   bnmc(b, '[d', 'PrevError')
   bnmc(b, ']d', 'NextError')
+
+  require'completion'.on_attach()
 end
 
 local servers = { 'gopls' }

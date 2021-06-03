@@ -145,11 +145,9 @@ endfunction
 let g:plug_window = 'enew'
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'SirVer/ultisnips'
 Plug 'aliou/bats.vim', { 'for': 'bats' }
 Plug 'chrisbra/colorizer'
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
-Plug 'honza/vim-snippets'
 Plug 'jamessan/vim-gnupg'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
@@ -166,6 +164,14 @@ Plug 'tpope/vim-surround'
 
 Plug 'jiangmiao/auto-pairs'
 let g:AutoPairsShortcutFastWrap = '<C-]>'
+
+Plug 'nvim-lua/completion-nvim'
+let g:completion_matching_strategy_list = ['exact', 'fuzzy']
+let g:completion_enable_auto_paren = 1
+let g:completion_trigger_on_delete = 1
+let g:completion_enable_snippet = 'UltiSnips'
+let g:completion_confirm_key = ""
+inoremap <expr><cr> pumvisible() ? "\<Plug>(completion_confirm_completion)" : "\<cr>"
 
 Plug 'chrisbra/csv.vim'
 let b:csv_arrange_align = 'l*'
@@ -217,6 +223,11 @@ let g:nord_underline = 1
 Plug 'ollykel/v-vim', { 'for': 'v' }
 let g:v_autofmt_bufwritepre = 1
 autocmd Filetype vlang setlocal listchars+=tab:\ \ 
+
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+let g:UltiSnipsJumpForwardTrigger  = '<c-n>'
+let g:UltiSnipsJumpBackwardTrigger = '<c-p>'
 
 Plug 'vim-airline/vim-airline'
 let g:airline_powerline_fonts = 1
