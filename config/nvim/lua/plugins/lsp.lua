@@ -31,10 +31,10 @@ lspcmd('PrevError',      'diagnostic', 'goto_next')
 local on_attach = function(c, b)
   bopt(b, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
-  bnmc(b, 'gd',         'Definition')
-  bnmc(b, 'K',          'vim.lsp.buf.hover()')
-  bnml(b, '[d',         'vim.lsp.diagnostic.goto_prev()')
-  bnml(b, ']d',         'vim.lsp.diagnostic.goto_next()')
+  bnmc(b, 'gd', 'Definition')
+  bnmc(b, 'K',  'Hover')
+  bnmc(b, '[d', 'PrevError')
+  bnmc(b, ']d', 'NextError')
 end
 
 local servers = { 'gopls' }
