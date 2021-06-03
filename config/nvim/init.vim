@@ -12,7 +12,7 @@ set expandtab
 set exrc
 set fileformat=unix
 set foldcolumn=auto
-set formatoptions+=ron1
+set formatoptions-=cro
 set gdefault
 set hidden
 set ignorecase
