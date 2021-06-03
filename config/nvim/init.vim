@@ -6,10 +6,12 @@ set autowrite
 set breakindent
 set cedit=<C-O>
 set colorcolumn=80
+set completeopt=menuone,noinsert,noselect
+set confirm
 set expandtab
 set exrc
-set foldcolumn=auto
 set fileformat=unix
+set foldcolumn=auto
 set formatoptions+=ron1
 set gdefault
 set hidden
