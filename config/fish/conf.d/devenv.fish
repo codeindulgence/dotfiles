@@ -20,13 +20,15 @@ function devenv --on-event fish_prompt
   # Load Python envs/versions
   if type -q pyenv
     if test -r .python-version
+      set -gx PYENV_VERSION (cat .python-version)
       if test (type -t pyenv) != 'function'
+        pyenv init --path | source
         pyenv init - | source
       end
-
-      if type -q _pyenv_virtualenv_hook
+      if not type -q _pyenv_virtualenv_hook
         pyenv virtualenv-init - | source
       end
     end
   end
+
 end
