@@ -84,7 +84,7 @@ symbol = " "
 
 [python]
 symbol = " "
-format = ' [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )](yellow)'
+format = ' [${symbol}${pyenv_prefix}(${version} )( $virtualenv )](yellow)'
 
 [ruby]
 symbol = " "
