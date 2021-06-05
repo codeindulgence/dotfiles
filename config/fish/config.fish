@@ -16,10 +16,17 @@ if status --is-interactive
     # Set tab width
     tabs -2
 
-    if ! contains "$window_name" Home New fish
-      type -q $window_name
-      and $window_name
-      or z $window_name >/dev/null
+    # For new windows
+    set -l npanes (tmux display-message -p '#{window_panes}')
+    if [ "$npanes" -eq 1 ]
+      if ! contains "$window_name" Home New fish
+        # Run $window_name if it's a valid command
+        type -q $window_name
+        and $window_name
+
+        # Try to cd to $window_name with z
+        or z $window_name >/dev/null
+      end
     end
   end
 end
