@@ -174,6 +174,11 @@ nnoremap <silent><C-n> :BufferNext<CR>
 nnoremap <silent><M-w> :BufferClose<CR>
 nnoremap <silent><M-.> :BufferMoveNext<CR>
 nnoremap <silent><M-,> :BufferMovePrevious<CR>
+nnoremap <silent>1<Tab> :BufferGoto 1<CR>
+nnoremap <silent>2<Tab> :BufferGoto 2<CR>
+nnoremap <silent>3<Tab> :BufferGoto 3<CR>
+nnoremap <silent>4<Tab> :BufferGoto 4<CR>
+nnoremap <silent>5<Tab> :BufferGoto 5<CR>
 
 Plug 'nvim-lua/completion-nvim'
 let g:completion_matching_strategy_list = ['exact', 'fuzzy']
