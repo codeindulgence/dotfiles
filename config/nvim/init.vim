@@ -150,6 +150,7 @@ Plug 'aliou/bats.vim', { 'for': 'bats' }
 Plug 'chrisbra/colorizer'
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 Plug 'jamessan/vim-gnupg'
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -164,6 +165,15 @@ Plug 'tpope/vim-surround'
 
 Plug 'jiangmiao/auto-pairs'
 let g:AutoPairsShortcutFastWrap = '<C-]>'
+
+Plug 'romgrk/barbar.nvim'
+let bufferline = get(g:, 'bufferline', {})
+let bufferline.closable = v:false
+nnoremap <silent><C-p> :BufferPrevious<CR>
+nnoremap <silent><C-n> :BufferNext<CR>
+nnoremap <silent><M-w> :BufferClose<CR>
+nnoremap <silent><M-.> :BufferMoveNext<CR>
+nnoremap <silent><M-,> :BufferMovePrevious<CR>
 
 Plug 'nvim-lua/completion-nvim'
 let g:completion_matching_strategy_list = ['exact', 'fuzzy']
@@ -231,8 +241,6 @@ let g:UltiSnipsJumpBackwardTrigger = '<c-p>'
 
 Plug 'vim-airline/vim-airline'
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_detect_spelllang = 0
 let g:airline#extensions#whitespace#enabled = 0
 if !exists('g:airline_symbols')
@@ -279,6 +287,8 @@ highlight DiffAdd guibg=NONE
 highlight DiffChange guibg=NONE
 highlight DiffDelete guibg=NONE
 highlight DiffText guibg=NONE
+highlight BufferCurrentSign guifg=#88C0D0
+highlight BufferInactive guifg=#616E88 guibg=#3b4252
 
 " Hide UI elements for terminal apps
 autocmd FileType vim-plug,ranger,tig set 
