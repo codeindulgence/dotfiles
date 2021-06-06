@@ -33,8 +33,8 @@ local on_attach = function(c, b)
 
   bnmc(b, 'gd', 'Definition')
   bnmc(b, 'K',  'Hover')
-  bnmc(b, '[d', 'PrevError')
-  bnmc(b, ']d', 'NextError')
+  bnmc(b, ']d', 'PrevError')
+  bnmc(b, '[d', 'NextError')
 
   require'completion'.on_attach()
 end
@@ -43,3 +43,16 @@ local servers = { 'gopls' }
 for _, server in ipairs(servers) do
   lsp[server].setup { on_attach = on_attach }
 end
+
+lsp.pyright.setup {
+  on_attach = on_attach,
+  settings = {
+    python = {
+      analysis = {
+        typeCheckingMode = "strict",
+      },
+      venvPath = "/Users/nick/.pyenv/versions/",
+      venv = "dbe"
+    }
+  }
+}
