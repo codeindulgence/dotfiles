@@ -46,6 +46,14 @@ for _, server in ipairs(servers) do
   lsp[server].setup { on_attach = on_attach }
 end
 
+lsp.efm.setup {
+  on_attach = on_attach,
+  init_options = {documentFormatting = true},
+  cmd = {DATA_PATH .. "/lspinstall/efm/efm-langserver"},
+  cmd = '/usr/local/bin/efm-langserver',
+  filetypes = { 'python', 'yaml' , 'markdown' },
+}
+
 lsp.pyright.setup {
   on_attach = on_attach,
   settings = {

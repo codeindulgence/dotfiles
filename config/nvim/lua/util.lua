@@ -1,5 +1,6 @@
 -- Aliases
 cmd = vim.cmd
+DATA_PATH = vim.fn.stdpath('data')
 
 -- Buffer Option
 function bopt(bufnr, name, value)
