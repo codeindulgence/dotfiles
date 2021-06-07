@@ -27,10 +27,12 @@ lspcmd('References',     'buf',        'references')
 lspcmd('Format',         'buf',        'formatting')
 lspcmd('NextError',      'diagnostic', 'goto_prev')
 lspcmd('PrevError',      'diagnostic', 'goto_next')
+lspcmd('ShowError',      'diagnostic', 'show_line_diagnostics')
 
 local on_attach = function(c, b)
   bopt(b, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
+  bnmc(b, 'ge', 'ShowError')
   bnmc(b, 'gd', 'Definition')
   bnmc(b, 'K',  'Hover')
   bnmc(b, ']d', 'PrevError')
