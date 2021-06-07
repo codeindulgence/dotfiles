@@ -292,6 +292,8 @@ highlight DiffAdd guibg=NONE
 highlight DiffChange guibg=NONE
 highlight DiffDelete guibg=NONE
 highlight DiffText guibg=NONE
+highlight VGitSignAdd guifg=#A3BE8C
+highlight VGitSignRemove guifg=#BF616A
 highlight BufferCurrentSign guifg=#88C0D0
 highlight BufferInactive guifg=#616E88 guibg=#3b4252
 
