@@ -236,6 +236,9 @@ let g:nord_italic = 1
 let g:nord_italic_comments = 1
 let g:nord_underline = 1
 
+Plug 'simrat39/symbols-outline.nvim'
+nnoremap <silent><F6> :SymbolsOutline<CR>
+
 Plug 'ollykel/v-vim', { 'for': 'v' }
 let g:v_autofmt_bufwritepre = 1
 autocmd Filetype vlang setlocal listchars+=tab:\ \ 
