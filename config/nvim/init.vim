@@ -73,8 +73,8 @@ nnoremap v <C-V>
 nnoremap <silent><C-N> :bnext<CR>
 nnoremap <silent><C-P> :bNext<CR>
 nnoremap <silent><Leader>/ :noh<CR>
-nnoremap <silent><Return> :e .<CR>
 
+nnoremap <Leader><Space> :e .<CR>
 nnoremap <Leader>- yyp$v^r-
 nnoremap <Leader>= yyp$v^r=
 nnoremap <Leader>O O<Esc>
