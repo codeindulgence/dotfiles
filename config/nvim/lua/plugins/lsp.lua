@@ -1,4 +1,5 @@
 local lsp = require('lspconfig')
+require('lspinstall').setup()
 
 function lspcmd(name, scope, cmd)
   lcmd(name, 'vim.lsp.'..scope..'.'..cmd)
@@ -52,16 +53,13 @@ local on_attach = function(c, b)
   require'completion'.on_attach()
 end
 
-local servers = { 'gopls' }
+local servers = { 'gopls', 'lua' }
 for _, server in ipairs(servers) do
   lsp[server].setup { on_attach = on_attach }
 end
 
 lsp.efm.setup {
   on_attach = on_attach,
-  init_options = {documentFormatting = true},
-  cmd = {DATA_PATH .. "/lspinstall/efm/efm-langserver"},
-  cmd = '/usr/local/bin/efm-langserver',
   filetypes = { 'python', 'yaml' , 'markdown' },
 }
 
