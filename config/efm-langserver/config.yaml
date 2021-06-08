@@ -187,8 +187,8 @@ languages:
     # - <<: *python-mypy
     # - <<: *python-autopep8
     # - <<: *python-yapf
-    # - <<: *python-black
-    # - <<: *python-isort
+    - <<: *python-black
+    - <<: *python-isort
 
   dockerfile:
     - <<: *dockerfile-hadolint
