@@ -47,6 +47,7 @@ set splitbelow
 set splitright
 set tabstop=2
 set termguicolors
+set timeoutlen=500
 set ttimeout
 set ttimeoutlen=100
 set undofile
@@ -58,7 +59,6 @@ let mapleader = ' '
 
 " Normal mode Mappings
 nnoremap ! :!
-nnoremap ' `
 nnoremap : ;
 nnoremap ; :
 nnoremap <C-C> <CR>
@@ -148,6 +148,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'aliou/bats.vim', { 'for': 'bats' }
 Plug 'chrisbra/colorizer'
+Plug 'folke/which-key.nvim'
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 Plug 'jamessan/vim-gnupg'
 Plug 'kyazdani42/nvim-web-devicons'
