@@ -61,7 +61,7 @@ let mapleader = ' '
 nnoremap ! :!
 nnoremap : ;
 nnoremap ; :
-nnoremap <C-C> <CR>
+nnoremap <C-C> <Esc>
 nnoremap <C-V> v
 nnoremap <M-w> :bw<CR>
 nnoremap <Tab> <C-^>

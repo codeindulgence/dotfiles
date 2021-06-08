@@ -27,7 +27,7 @@ end
 
 -- Create Lua Function Command
 function lcmd(name, fn)
-  cmd(':command '..name..' lua '..fn..'()')
+  cmd('command '..name..' lua '..fn..'()')
 end
 
 -- Highlight
