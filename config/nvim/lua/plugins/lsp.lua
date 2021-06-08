@@ -29,6 +29,17 @@ lspcmd('NextError',      'diagnostic', 'goto_prev')
 lspcmd('PrevError',      'diagnostic', 'goto_next')
 lspcmd('ShowError',      'diagnostic', 'show_line_diagnostics')
 
+f.sign_define('LspDiagnosticsSignError',       {text = ''})
+f.sign_define('LspDiagnosticsSignWarning',     {text = ''})
+f.sign_define('LspDiagnosticsSignInformation', {text = ''})
+f.sign_define('LspDiagnosticsSignHint',        {text = ''})
+
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    virtual_text = { prefix = '', },
+  }
+)
+
 local on_attach = function(c, b)
   bopt(b, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
