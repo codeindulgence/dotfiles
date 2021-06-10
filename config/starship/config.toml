@@ -92,6 +92,7 @@ format = " [$symbol($version )](red)"
 
 [rust]
 symbol = " "
+format = " [$symbol($version )](red)"
 
 [scala]
 symbol = " "
