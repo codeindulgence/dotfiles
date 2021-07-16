@@ -148,8 +148,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'aliou/bats.vim', { 'for': 'bats' }
 Plug 'chrisbra/colorizer'
-Plug 'folke/which-key.nvim'
-Plug 'haringsrob/nvim_context_vt'
+" Plug 'folke/which-key.nvim'
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 Plug 'jamessan/vim-gnupg'
 Plug 'kyazdani42/nvim-web-devicons'
