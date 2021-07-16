@@ -9,6 +9,7 @@
 		<string>com.runningwithcrayons.Alfred-3</string>
 		<string>com.runningwithcrayons.Alfred-Preferences-3</string>
 		<string>com.googlecode.iterm2</string>
+		<string>net.kovidgoyal.kitty</string>
 	</array>
 	<key>autoExpandSnippetsSound</key>
 	<false/>
