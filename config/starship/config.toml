@@ -4,6 +4,9 @@ add_newline = false
 symbol = "  "
 disabled = true
 
+[[battery.display]]
+threshold = 95
+
 [cmd_duration]
 show_milliseconds = true
 format = " [$duration](fg:12 dimmed bold) "
