@@ -100,6 +100,7 @@ symbol = " "
 [shlvl]
 disabled = false
 threshold = 3
+symbol = " "
 
 [swift]
 symbol = "ﯣ "
