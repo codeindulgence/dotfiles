@@ -7,6 +7,10 @@ if status --is-interactive
   else
     set -l window_name (tmux display -p '#{window_name}')
 
+    if not contains $window_name $tmux_history
+      set -Ux tmux_history $window_name $tmux_history[1..9]
+    end
+
     # Bindings
     set fish_key_bindings fish_default_key_bindings
 
