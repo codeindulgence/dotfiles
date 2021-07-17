@@ -5,7 +5,7 @@ filetype plugin indent on
 set autowrite
 set breakindent
 set cedit=<C-O>
-set colorcolumn=80
+set colorcolumn=88
 set commentstring=#\ %s
 set completeopt=menuone,noinsert,noselect
 set confirm
