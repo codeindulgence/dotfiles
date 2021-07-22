@@ -148,7 +148,6 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'aliou/bats.vim', { 'for': 'bats' }
 Plug 'chrisbra/colorizer'
-" Plug 'folke/which-key.nvim'
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 Plug 'jamessan/vim-gnupg'
 Plug 'kyazdani42/nvim-web-devicons'
@@ -186,7 +185,6 @@ Plug 'nvim-lua/completion-nvim'
 let g:completion_matching_strategy_list = ['exact', 'fuzzy']
 let g:completion_enable_auto_paren = 1
 let g:completion_trigger_on_delete = 1
-let g:completion_enable_snippet = 'UltiSnips'
 let g:completion_confirm_key = ""
 inoremap <expr><cr> pumvisible() ? "\<Plug>(completion_confirm_completion)" : "\<cr>"
 
@@ -243,11 +241,6 @@ nnoremap <silent><F6> :SymbolsOutline<CR>
 Plug 'ollykel/v-vim', { 'for': 'v' }
 let g:v_autofmt_bufwritepre = 1
 autocmd Filetype vlang setlocal listchars+=tab:\ \ 
-
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-let g:UltiSnipsJumpForwardTrigger  = '<c-n>'
-let g:UltiSnipsJumpBackwardTrigger = '<c-p>'
 
 Plug 'vim-airline/vim-airline'
 let g:airline_powerline_fonts = 1
