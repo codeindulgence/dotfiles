@@ -1,22 +1,12 @@
 function tmuxnew
-  argparse 'd/debug' 'r/reset' -- $argv
+  argparse 'd/debug' -- $argv
 
-  if set -q _flag_reset
-    set -eU tmux_history
-    echo History reset
-    return
-  end
-
-  if not set -q tmux_history
-    tmux command-prompt -p 'New:' "new-window -n '%%'"
-    return
-  end
-
+  set -l hist (z -l | awk '{print $2}' | head -n 15 | xargs -n 1 basename)
   set -l opts '-T "#[align=centre]New Window" -x 0 -y W'
   set -l command 'tmux display-menu ' $opts
 
-  for i in (seq (count $tmux_history))
-    set -l name $tmux_history[$i]
+  for i in (seq (count $hist))
+    set -l name $hist[$i]
     set command $command "'$name'" $i "'new-window -n \'$name\''"
   end
 
