@@ -39,6 +39,8 @@
   showUntrackedFiles = all
 [tig]
   line-graphics = utf-8
+  main-view-author-display = no
+  main-view-date-display = relative-compact
 [tig "color"]
   cursor = black magenta
 [rebase]
