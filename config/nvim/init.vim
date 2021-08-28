@@ -227,7 +227,6 @@ function! PwdHistoryOrFiles()
   endif
 endfunction
 command! PwdHistory call PwdHistory()
-autocmd VimEnter * call PwdHistoryOrFiles()
 
 Plug 'arcticicestudio/nord-vim'
 let g:nord_uniform_diff_background = 1
