@@ -1,5 +1,4 @@
 local lsp = require('lspconfig')
-require('lspinstall').setup()
 
 local function lspcmd(name, scope, cmd)
   U.lcmd(name, 'vim.lsp.'..scope..'.'..cmd)
@@ -58,7 +57,8 @@ lsp.efm.setup {
   filetypes = { 'python', 'yaml' , 'markdown' },
 }
 
-lsp.lua.setup {
+lsp.sumneko_lua.setup {
+  cmd = { Data..'/lsp_servers/sumneko_lua/extension/server/bin/lua-language-server' },
   on_attach = on_attach,
   settings = {
     Lua = {
@@ -66,10 +66,7 @@ lsp.lua.setup {
         globals = { 'vim' }
       },
       workspace = {
-        library = {
-          [vim.fn.expand('$VIMRUNTIME/lua')] = true,
-          [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
-        },
+        library = vim.api.nvim_get_runtime_file("", true),
       },
     }
   },
