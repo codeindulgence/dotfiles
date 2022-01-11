@@ -257,9 +257,10 @@ vmap <C-_> gc
 nmap <C-\> gcip
 
 Plug 'tanvirtin/vgit.nvim'
+
 nnoremap <silent> [c :VGit hunk_up<CR>
 nnoremap <silent> ]c :VGit hunk_down<CR>
-nnoremap <silent> go :VGit hunk_preview<CR>
+nnoremap <silent> go :VGit buffer_hunk_preview<CR>
 
 Plug 'codeindulgence/vim-ranger'
 let g:ranger_on_exit = 'bw!'
