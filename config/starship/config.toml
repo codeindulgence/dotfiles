@@ -26,6 +26,7 @@ symbol = " "
 
 [elixir]
 symbol = " "
+format = " [$symbol($version )]($style)"
 
 [elm]
 symbol = " "
@@ -78,6 +79,7 @@ symbol = " "
 
 [package]
 symbol = " "
+format = " [$symbol($version )]($style)"
 
 [perl]
 symbol = " "
