@@ -1,4 +1,4 @@
-local lsp = require('lspconfig')
+local lsp = require("nvim-lsp-installer")
 
 local function lspcmd(name, scope, cmd)
   U.lcmd(name, 'vim.lsp.'..scope..'.'..cmd)
@@ -50,35 +50,39 @@ local on_attach = function(_, b)
   require'completion'.on_attach()
 end
 
-lsp.gopls.setup { on_attach = on_attach }
 
-lsp.efm.setup {
-  on_attach = on_attach,
-  filetypes = { 'python', 'yaml' , 'markdown' },
-}
-
-lsp.sumneko_lua.setup {
-  cmd = { Data..'/lsp_servers/sumneko_lua/extension/server/bin/lua-language-server' },
-  on_attach = on_attach,
-  settings = {
-    Lua = {
-      diagnostics = {
-        globals = { 'vim' }
-      },
-      workspace = {
-        library = vim.api.nvim_get_runtime_file("", true),
-      },
-    }
-  },
-}
-
-lsp.pyright.setup {
-  on_attach = on_attach,
-  settings = {
-    python = {
-      analysis = {
-        typeCheckingMode = "strict",
-      },
-    }
+lsp.on_server_ready(function(server)
+  local opts = {
+    on_attach = on_attach
   }
-}
+  print(server.name)
+
+  if server.name == 'efm' then
+      opts.filetypes = { 'python', 'yaml' , 'markdown' }
+  end
+
+  if server.name == 'sumneko_lua' then
+    opts.settings = {
+      Lua = {
+        diagnostics = {
+          globals = { 'vim' }
+        },
+        workspace = {
+          library = vim.api.nvim_get_runtime_file("", true),
+        },
+      }
+    }
+  end
+
+  if server.name == 'pyright' then
+    opts.settings = {
+      python = {
+        analysis = {
+          typeCheckingMode = "strict",
+        },
+      }
+    }
+  end
+
+  server:setup(opts)
+end)
