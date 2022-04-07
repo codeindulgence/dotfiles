@@ -148,11 +148,11 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'aliou/bats.vim', { 'for': 'bats' }
 Plug 'chrisbra/colorizer'
+Plug 'earthly/earthly.vim',
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 Plug 'jamessan/vim-gnupg'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/nvim-lsp-installer'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'tpope/vim-abolish'
@@ -163,6 +163,7 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
+Plug 'williamboman/nvim-lsp-installer'
 
 Plug 'jiangmiao/auto-pairs'
 let g:AutoPairsShortcutFastWrap = '<C-]>'
