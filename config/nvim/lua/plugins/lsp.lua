@@ -58,7 +58,7 @@ lsp.on_server_ready(function(server)
   print(server.name)
 
   if server.name == 'efm' then
-      opts.filetypes = { 'python', 'yaml' , 'markdown' }
+      opts.filetypes = { 'python', 'yaml', 'markdown', 'dockerfile' }
   end
 
   if server.name == 'sumneko_lua' then
