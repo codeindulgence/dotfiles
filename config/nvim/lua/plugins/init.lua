@@ -3,4 +3,8 @@ require('plugins.treesitter')
 require('plugins.lsp')
 
 -- Basic configs
-require('vgit').setup()
+require('vgit').setup({
+  settings = {
+    live_blame = { enabled = false }
+  }
+})
