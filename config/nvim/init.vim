@@ -54,6 +54,7 @@ set undofile
 set updatetime=300
 set wildignorecase
 set wildmode=full
+set textwidth=88
 
 let mapleader = ' '
 
