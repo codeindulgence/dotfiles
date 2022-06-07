@@ -192,6 +192,10 @@ inoremap <expr><cr> pumvisible() ? "\<Plug>(completion_confirm_completion)" : "\
 Plug 'chrisbra/csv.vim'
 let b:csv_arrange_align = 'l*'
 
+Plug 'editorconfig/editorconfig-vim'
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+autocmd BufEnter * :EditorConfigReload
+
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 nnoremap <C-s> :Rg 
