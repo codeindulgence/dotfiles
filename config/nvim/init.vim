@@ -159,7 +159,6 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-dadbod'
 Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-speeddating'
@@ -238,6 +237,10 @@ let g:nord_underline = 1
 
 Plug 'simrat39/symbols-outline.nvim'
 nnoremap <silent><F6> :SymbolsOutline<CR>
+
+Plug 'tpope/vim-fugitive'
+nnoremap <Leader><C-G> :Git commit -va<CR>
+autocmd User FugitiveEditor startinsert
 
 Plug 'ollykel/v-vim', { 'for': 'v' }
 let g:v_autofmt_bufwritepre = 1
