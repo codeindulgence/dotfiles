@@ -39,6 +39,7 @@ metals.sbt
 .biome
 .notes.md
 .ruby-version
+.python-version
 .sass-cache
 .todo
 .vimrc_local
