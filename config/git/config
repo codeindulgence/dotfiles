@@ -19,6 +19,7 @@
   default = simple
   followTags = true
 [alias]
+  b = branch
   br = branch
   co = checkout
   ci = commit
@@ -29,8 +30,9 @@
   pop = stash pop
   prb = pull --rebase
   prbs = "!git stash; git pull --rebase; git stash pop"
-  amend = "commit --amend"
+  amend = "commit --amend -C HEAD"
   soft = "reset --soft HEAD^"
+  hard = "reset --hard"
 [credential]
   helper = osxkeychain
 [diff]
