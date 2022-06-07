@@ -35,8 +35,10 @@
   helper = osxkeychain
 [diff]
   compactionHeuristic = true
+  colorMoved = default
 [merge]
   ff = only
+  tool = nvimdiff
   conflictstyle = diff3
 [commit]
   gpgSign = true
