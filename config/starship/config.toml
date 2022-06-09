@@ -1,3 +1,5 @@
+# format = "$all$git$character"
+format = "$all$custom$character"
 add_newline = false
 
 [aws]
@@ -5,7 +7,7 @@ symbol = "  "
 disabled = true
 
 [[battery.display]]
-threshold = 95
+threshold = 25
 
 [cmd_duration]
 show_milliseconds = true
@@ -109,3 +111,9 @@ symbol = " "
 
 [swift]
 symbol = "ﯣ "
+
+[custom.arch]
+description = "The current architecture"
+symbol = "礪"
+format = "[$symbol](cyan)[intel ](bold red)"
+when = """ test "$(arch)" = "i386" """
