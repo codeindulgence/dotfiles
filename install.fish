@@ -16,7 +16,7 @@ function check_dotfiles
 end
 
 function check_programs
-  set -l error 0
+  set -l warning 0
 
   cd $dotfile_dir/config
 
@@ -27,11 +27,11 @@ function check_programs
       ok
     else
       echo No $program! No $program!
-      set error 1
+      set warning 1
     end
   end
 
-  return $error
+  return $warning
 end
 
 function symlink_configs
@@ -65,8 +65,14 @@ function install_base16
   end
 end
 
+function continue_anyway
+  echo Some programs not found.
+  test (read -n1 -P 'Continue anyway? [yn] ') = 'y'
+end
+
 check_dotfiles
 and check_programs
+or continue_anyway
 and symlink_configs
 and install_base16
 
