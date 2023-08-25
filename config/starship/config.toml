@@ -15,6 +15,7 @@ format = " [$duration](fg:12 dimmed bold) "
 
 [conda]
 symbol = " "
+format = ' [$symbol$environment]($style) '
 
 [dart]
 symbol = " "
@@ -56,6 +57,9 @@ symbol = " "
 
 [hg_branch]
 symbol = " "
+
+[hostname]
+format = "[$hostname](8)  "
 
 [java]
 symbol = " "
@@ -111,6 +115,9 @@ symbol = " "
 
 [swift]
 symbol = "ﯣ "
+
+[username]
+format = "[$user@](8)"
 
 [custom.arch]
 description = "The current architecture"
