@@ -153,7 +153,6 @@ Plug 'earthly/earthly.vim',
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 Plug 'jamessan/vim-gnupg'
 Plug 'kyazdani42/nvim-web-devicons'
-Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'slim-template/vim-slim'
@@ -164,7 +163,9 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
-Plug 'williamboman/nvim-lsp-installer'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'neovim/nvim-lspconfig'
 
 Plug 'jiangmiao/auto-pairs'
 let g:AutoPairsShortcutFastWrap = '<C-]>'
@@ -180,13 +181,6 @@ nnoremap <silent>2<Tab> :BufferGoto 2<CR>
 nnoremap <silent>3<Tab> :BufferGoto 3<CR>
 nnoremap <silent>4<Tab> :BufferGoto 4<CR>
 nnoremap <silent>5<Tab> :BufferGoto 5<CR>
-
-Plug 'nvim-lua/completion-nvim'
-let g:completion_matching_strategy_list = ['exact', 'fuzzy']
-let g:completion_enable_auto_paren = 1
-let g:completion_trigger_on_delete = 1
-let g:completion_confirm_key = ""
-inoremap <expr><cr> pumvisible() ? "\<Plug>(completion_confirm_completion)" : "\<cr>"
 
 Plug 'chrisbra/csv.vim'
 let b:csv_arrange_align = 'l*'
