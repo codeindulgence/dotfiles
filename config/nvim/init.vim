@@ -170,8 +170,6 @@ Plug 'jiangmiao/auto-pairs'
 let g:AutoPairsShortcutFastWrap = '<C-]>'
 
 Plug 'romgrk/barbar.nvim'
-let bufferline = get(g:, 'bufferline', {})
-let bufferline.closable = v:false
 nnoremap <silent><C-p> :BufferPrevious<CR>
 nnoremap <silent><C-n> :BufferNext<CR>
 nnoremap <silent><M-w> :BufferClose<CR>
