@@ -50,6 +50,9 @@
   line-graphics = utf-8
   main-view-author-display = no
   main-view-date-display = relative-compact
+  status-show-untracked-files = yes
+[tig "bind"]
+  status = C !git commit -v
 [tig "color"]
   cursor = black magenta
 [rebase]
