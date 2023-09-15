@@ -35,6 +35,7 @@ metals.sbt
 .*.env
 .DS_Store
 .cap_tasks~
+.conda-env
 .env
 .biome
 .notes.md
