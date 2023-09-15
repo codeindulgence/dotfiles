@@ -15,7 +15,7 @@ function mux
 
   for var in $vars
     tmux send-keys -t $count "export MUXV=\"$var\""
-    tmux send-keys -t $count "$cmd $var $sfx"
+    tmux send-keys -t $count "$cmd $var $sfx # Enter to run"
     if [ $count -lt (count $vars) ]
       if [ (math $count%2) -eq 0 ]
         set ori "-h"
