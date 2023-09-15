@@ -41,6 +41,7 @@ local on_attach = function(_, b)
 
   U.bnmc(b, 'ge', 'ShowError')
   U.bnmc(b, 'gd', 'Definition')
+  U.bnmc(b, 'gh', 'SignatureHelp')
   U.bnmc(b, 'K',  'Hover')
   U.bnmc(b, ']e', 'PrevError')
   U.bnmc(b, '[e', 'NextError')
