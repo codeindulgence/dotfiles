@@ -156,6 +156,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-dadbod'
 Plug 'tpope/vim-eunuch'
