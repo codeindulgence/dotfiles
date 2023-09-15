@@ -242,7 +242,7 @@ Plug 'simrat39/symbols-outline.nvim'
 nnoremap <silent><F6> :SymbolsOutline<CR>
 
 Plug 'tpope/vim-fugitive'
-nnoremap <Leader><C-G> :Git commit -va<CR>
+nnoremap <Leader><C-G> :Git commit -va<CR>:Git push<CR>
 autocmd User FugitiveEditor startinsert
 
 Plug 'ollykel/v-vim', { 'for': 'v' }
@@ -264,11 +264,7 @@ nmap <C-_> gcc
 vmap <C-_> gc
 nmap <C-\> gcip
 
-Plug 'tanvirtin/vgit.nvim'
-
-nnoremap <silent> [c :VGit hunk_up<CR>
-nnoremap <silent> ]c :VGit hunk_down<CR>
-nnoremap <silent> go :VGit buffer_hunk_preview<CR>
+Plug 'lewis6991/gitsigns.nvim'
 
 Plug 'codeindulgence/vim-ranger'
 let g:ranger_on_exit = 'bw!'
