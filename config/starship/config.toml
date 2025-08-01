@@ -72,10 +72,10 @@ symbol = " "
 format = " [$symbol($version )]($style)"
 
 [memory_usage]
-symbol = " "
+symbol = "󰍛 "
 
 [nim]
-symbol = " "
+symbol = " "
 
 [nodejs]
 format = " [$symbol($version )](green)"
@@ -84,7 +84,7 @@ format = " [$symbol($version )](green)"
 symbol = " "
 
 [package]
-symbol = " "
+symbol = " "
 format = " [$symbol($version )]($style)"
 
 [perl]
@@ -124,6 +124,6 @@ format = "[$user@](8)"
 
 [custom.arch]
 description = "The current architecture"
-symbol = "礪"
+symbol = "󰒆 "
 format = "[$symbol](cyan)[intel ](bold red)"
 when = """ test "$(arch)" = "i386" """
