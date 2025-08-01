@@ -110,7 +110,10 @@ symbol = " "
 
 [shlvl]
 disabled = false
-threshold = 3
+threshold = 4
+format = '[$symbol]($style) '
+repeat = true
+repeat_offset = 4
 symbol = " "
 
 [swift]
